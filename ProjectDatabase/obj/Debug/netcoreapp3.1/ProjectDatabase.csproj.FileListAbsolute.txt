@@ -1,0 +1,10 @@
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\bin\Debug\netcoreapp3.1\ProjectDatabase.deps.json
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\bin\Debug\netcoreapp3.1\ProjectDatabase.dll
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\obj\Debug\netcoreapp3.1\ProjectDatabase.csprojAssemblyReference.cache
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\obj\Debug\netcoreapp3.1\ProjectDatabase.AssemblyInfoInputs.cache
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\obj\Debug\netcoreapp3.1\ProjectDatabase.AssemblyInfo.cs
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\bin\Debug\netcoreapp3.1\ProjectDatabase.pdb
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\obj\Debug\netcoreapp3.1\ProjectDatabase.dll
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\obj\Debug\netcoreapp3.1\ProjectDatabase.pdb
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\bin\Debug\netcoreapp3.1\hibernate.cfg.xml
+C:\Users\Zeljko\Desktop\ProjectDB\ProjectDatabase\obj\Debug\netcoreapp3.1\ProjectDatabase.csproj.CoreCompileInputs.cache
