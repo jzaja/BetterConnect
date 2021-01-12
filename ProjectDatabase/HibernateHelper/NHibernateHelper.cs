@@ -13,7 +13,7 @@ using System.Text;
 
 namespace ProjectDatabase.HibernateHelper
 {
-    public static class NHibernateHelper
+    public class NHibernateHelper : INHibernateHelper
     {
         private static ISessionFactory _sessionFactory;
         private static Configuration _configuration;
@@ -25,7 +25,7 @@ namespace ProjectDatabase.HibernateHelper
            // return SessionFactory.OpenSession();
         //}
 
-        public static ISession OpenSession()
+        public ISession OpenSession()
         {
             try
             {

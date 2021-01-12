@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Environment = ProjectDatabase.HibernateHelper.Environment;
 
 namespace ProjectDatababaseTest.RepositoryTest
 {
@@ -22,7 +23,7 @@ namespace ProjectDatababaseTest.RepositoryTest
         [SetUp]
         public void CreateSchema()
         {
-            _interestRepo = new InterestRepository(new InMemoryNHibernateHelper());
+            _interestRepo = new InterestRepository(NHibernateHelperFactory.GetHelper(Environment.Test));
         }
 
         [Test]

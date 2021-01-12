@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="HibernateHelper\NHibernateHelperFactory.cs~RF2ef58ad4.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

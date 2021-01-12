@@ -5308,11 +5308,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
+      "projectUniqueName": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
       "projectName": "ProjectDatababaseTest",
-      "projectPath": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
+      "projectPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
       "packagesPath": "C:\\Users\\Zeljko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatababaseTest\\obj\\",
+      "outputPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5331,8 +5331,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\ProjectDatabase.csproj": {
-              "projectPath": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\ProjectDatabase.csproj"
+            "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {
+              "projectPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj"
             }
           }
         }

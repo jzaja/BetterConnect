@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Environment = ProjectDatabase.HibernateHelper.Environment;
 
 namespace ProjectDatababaseTest.RepositoryTest
 {
@@ -18,9 +19,9 @@ namespace ProjectDatababaseTest.RepositoryTest
         private IUserRepository _userRepo;
 
         [SetUp]
-        public void CreateSchema()
+        public void Setup()
         {
-            _userRepo = new UserRepository(new InMemoryNHibernateHelper());
+            _userRepo = new UserRepository(NHibernateHelperFactory.GetHelper(Environment.Test));
         }
 
         [Test]

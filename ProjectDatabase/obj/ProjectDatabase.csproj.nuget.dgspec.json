@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\ProjectDatabase.csproj": {}
+    "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\ProjectDatabase.csproj": {
+    "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\ProjectDatabase.csproj",
+        "projectUniqueName": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
         "projectName": "ProjectDatabase",
-        "projectPath": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\ProjectDatabase.csproj",
+        "projectPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
         "packagesPath": "C:\\Users\\Zeljko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatabase\\obj\\",
+        "outputPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

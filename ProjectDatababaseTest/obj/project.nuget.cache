@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Fn0MnjGuhG9DjJBjMig99+sKnBgUW9p014zhbYGTilzXpHEgUwsmu4z6JIp3KNa6so70BWfx7o2dhQKm6861A==",
+  "dgSpecHash": "s3KqxvE1X9tzmOQdnoaBA0XeDZhLF5wt8OBaFQePjRhvWC1Wct/bsgYIJZLMI9DNUm4Pe1bC03S2OeJs6iCUqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Zeljko\\Desktop\\ProjectDB\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
+  "projectFilePath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zeljko\\.nuget\\packages\\antlr3.runtime\\3.5.1\\antlr3.runtime.3.5.1.nupkg.sha512",
     "C:\\Users\\Zeljko\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
