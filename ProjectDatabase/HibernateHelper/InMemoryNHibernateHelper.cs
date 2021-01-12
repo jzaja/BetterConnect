@@ -46,6 +46,7 @@ namespace ProjectDatabase.HibernateHelper
                 .Mappings(mappings => mappings.FluentMappings.Add<UserMap>())
                 .Mappings(mappings => mappings.FluentMappings.Add<AdminMap>())
                 .Mappings(mappings => mappings.FluentMappings.Add<InterestMap>())
+                .Mappings(mappings => mappings.FluentMappings.Add<RequestMap>())
                 .ExposeConfiguration(cfg => config = cfg)
                 .BuildConfiguration();
 

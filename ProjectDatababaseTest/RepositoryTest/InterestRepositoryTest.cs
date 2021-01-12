@@ -21,7 +21,7 @@ namespace ProjectDatababaseTest.RepositoryTest
         private IInterestRepository _interestRepo;
 
         [SetUp]
-        public void CreateSchema()
+        public void Setup()
         {
             _interestRepo = new InterestRepository(NHibernateHelperFactory.GetHelper(Environment.Test));
         }
