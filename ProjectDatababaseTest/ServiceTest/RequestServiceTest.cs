@@ -77,5 +77,23 @@ namespace ProjectDatababaseTest.ServiceTest
             Assert.IsFalse(approved.IsDeclined);
         }
 
+        [Test]
+        public void TestDeclineRequest()
+        {
+            var sender = Generator.GenerateUser("sender", "pass", "091");
+            var receiver = Generator.GenerateUser("receiver", "pass", "098");
+            var req = new Request { SenderId = sender.Id, ReceiverId = receiver.Id, IsConfirmed = false, IsDeclined = false };
+
+            _mockRequestRepo.Setup(x => x.GetByKey(sender.Id, receiver.Id)).Returns(req);
+            _mockUserRepo.Setup(x => x.GetUser(sender.Id)).Returns(sender);
+            _mockUserRepo.Setup(x => x.GetUser(receiver.Id)).Returns(receiver);
+            _mockRequestRepo.Setup(x => x.Update(req)).Returns(req);
+
+            var service = new RequestService(_mockRequestRepo.Object, _mockUserRepo.Object);
+            var approved = service.UpdateRequest(sender.Id, receiver.Id, false, true);
+            Assert.IsFalse(approved.IsConfirmed);
+            Assert.IsTrue(approved.IsDeclined);
+        }
+
     }
 }
