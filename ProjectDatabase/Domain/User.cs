@@ -8,10 +8,12 @@ namespace ProjectDatabase.Domain
     {
         public virtual string PhoneNumber { get; set; }
         public virtual IList<Interest> Interests { get; set; }
+        public virtual IList<Request> Requests { get; set; }
 
         public User()
         {
             Interests = new List<Interest>();
+            Requests = new List<Request>();
         }
 
         public virtual void AddInterest(Interest interest)
@@ -24,6 +26,11 @@ namespace ProjectDatabase.Domain
         {
             interest.Users.Remove(this);
             Interests.Remove(interest);
+        }
+
+        public virtual void AddRequest(Request request)
+        {
+            Requests.Add(request);
         }
 
     }

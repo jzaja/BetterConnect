@@ -8,7 +8,8 @@ namespace ProjectDatabase.Domain
     {
         public virtual int SenderId { get; set; }
         public virtual int ReceiverId { get; set; }
-        public virtual int ConfirmationsNum { get; set; }
+        public virtual bool IsConfirmed { get; set; }
+        public virtual bool IsDeclined { get; set; }
 
         public override bool Equals(object obj)
         {

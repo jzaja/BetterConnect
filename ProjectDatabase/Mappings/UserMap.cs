@@ -21,6 +21,7 @@ namespace ProjectDatabase.Mappings
             HasManyToMany(x => x.Interests)
                 .Cascade.All()
                 .Table("UserInterest");
+            HasMany(x => x.Requests);
         }
 
     }

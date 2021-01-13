@@ -24,6 +24,13 @@ namespace ProjectDatabase.Repository.ConcreteRepository
             return request;
         }
 
+        public Request Update(Request request)
+        {
+            _session.Update(request);
+            _session.BeginTransaction().Commit();
+            return request;
+        }
+
         public long RowCount()
         {
             return _session.QueryOver<Request>().RowCountInt64();
@@ -31,12 +38,19 @@ namespace ProjectDatabase.Repository.ConcreteRepository
 
         public Request ApproveRequest(Request request)
         {
-            throw new NotImplementedException();
+            request.IsConfirmed = true;
+            return Save(request);
         }
 
         public Request DeclineRequest(Request request)
         {
-            throw new NotImplementedException();
+            request.IsDeclined = true;
+            return Save(request);
+        }
+
+        public Request GetByKey(int senderId, int receiverId)
+        {
+            return _session.Query<Request>().Where(x => x.SenderId == senderId && x.ReceiverId == receiverId).SingleOrDefault();
         }
 
     }

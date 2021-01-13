@@ -11,7 +11,8 @@ namespace ProjectDatabase.Mappings
         public RequestMap()
         {
             CompositeId().KeyProperty(x => x.SenderId).KeyProperty(x => x.ReceiverId);
-            Map(x => x.ConfirmationsNum);
+            Map(x => x.IsConfirmed);
+            Map(x => x.IsDeclined);
         }
     }
 }
