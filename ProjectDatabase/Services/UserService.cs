@@ -17,6 +17,11 @@ namespace ProjectDatabase.Services
             _interestRepository = interestRepository;
         }
 
+        public IList<User> GetAllUsers()
+        {
+            return _userRepo.GetAll();
+        }
+
         public User AddInterest(int userId, string interestName)
         {
             User user = (User)_userRepo.Get(userId);

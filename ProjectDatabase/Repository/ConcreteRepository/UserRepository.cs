@@ -16,6 +16,11 @@ namespace ProjectDatabase.Repository.ConcreteRepository
             session = helper.OpenSession();
         }
 
+        public List<User> GetAll()
+        {
+            return session.Query<User>().ToList();
+        }
+
         public BasicUser Get(int id)
         {
             return session.Get<BasicUser>(id);
