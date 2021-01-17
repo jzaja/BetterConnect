@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uP4PvmsKn0OP41vHbrCriMMcPWU95SzIS7Do0Uag41gztzDTG+4gUX9izotInWK3FptySnzk+QWVjEAWnZqg0w==",
+  "dgSpecHash": "mGWBwZ4WUUkSt6Udm1wu6HFnqpkQSNlo1hT/qEpPK1bpWawRCVdk90EhSGSLvOrC4o7BMQhkDJBYr7Ss0Efy6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
   "expectedPackageFiles": [
@@ -15,8 +15,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\remotion.linq\\2.2.0\\remotion.linq.2.2.0.nupkg.sha512",
     "C:\\Users\\Zeljko\\.nuget\\packages\\remotion.linq.eagerfetching\\2.2.0\\remotion.linq.eagerfetching.2.2.0.nupkg.sha512",
     "C:\\Users\\Zeljko\\.nuget\\packages\\rhinomocks\\3.6.1\\rhinomocks.3.6.1.nupkg.sha512",
+    "C:\\Users\\Zeljko\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.113.2\\stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Zeljko\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+    "C:\\Users\\Zeljko\\.nuget\\packages\\system.data.sqlite.core\\1.0.113.7\\system.data.sqlite.core.1.0.113.7.nupkg.sha512",
     "C:\\Users\\Zeljko\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",

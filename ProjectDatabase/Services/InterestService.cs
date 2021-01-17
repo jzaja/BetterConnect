@@ -14,7 +14,5 @@ namespace ProjectDatabase.Services
             _interestRepository = interestRepository;
         }
 
-
-
     }
 }

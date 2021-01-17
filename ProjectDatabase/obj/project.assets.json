@@ -152,6 +152,33 @@
           "lib/net/Rhino.Mocks.dll": {}
         }
       },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/System.Data.SQLite.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -173,6 +200,12 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Data.SQLite.Core/1.0.113.7": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "1.0.113.2"
         }
       },
       "System.Diagnostics.Debug/4.0.11": {
@@ -831,6 +864,27 @@
         "rhinomocks.nuspec"
       ]
     },
+    "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.2": {
+      "sha512": "yGIM9xFyPHl79HluNTSQarvAOIJ68pmzmlMayVN6Nivu/7TiaHt7WqptolvwmuKdAXei8OzENh9RNdh7d6evjQ==",
+      "type": "package",
+      "path": "stub.system.data.sqlite.core.netstandard/1.0.113.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/System.Data.SQLite.dll",
+        "lib/netstandard2.0/System.Data.SQLite.dll.altconfig",
+        "lib/netstandard2.0/System.Data.SQLite.xml",
+        "lib/netstandard2.1/System.Data.SQLite.dll",
+        "lib/netstandard2.1/System.Data.SQLite.dll.altconfig",
+        "lib/netstandard2.1/System.Data.SQLite.xml",
+        "runtimes/linux-x64/native/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/SQLite.Interop.dll",
+        "runtimes/win-x64/native/SQLite.Interop.dll",
+        "runtimes/win-x86/native/SQLite.Interop.dll",
+        "stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
+        "stub.system.data.sqlite.core.netstandard.nuspec"
+      ]
+    },
     "System.Collections/4.3.0": {
       "sha512": "3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
       "type": "package",
@@ -917,6 +971,17 @@
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Data.SQLite.Core/1.0.113.7": {
+      "sha512": "2DKMIxfZpIVzdMfx1dj9qvTm+0m0Mx6sN6CZXMQDNytU7Sk/JKo0Ox6mvHAicfHrQgqZbUZMzMMtLXD0kwmFfg==",
+      "type": "package",
+      "path": "system.data.sqlite.core/1.0.113.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.core.1.0.113.7.nupkg.sha512",
+        "system.data.sqlite.core.nuspec"
       ]
     },
     "System.Diagnostics.Debug/4.0.11": {
@@ -2332,7 +2397,8 @@
       "FluentNHibernate >= 3.1.0",
       "NHibernate >= 5.3.5",
       "NUnit >= 3.13.0",
-      "RhinoMocks >= 3.6.1"
+      "RhinoMocks >= 3.6.1",
+      "System.Data.SQLite.Core >= 1.0.113.7"
     ]
   },
   "packageFolders": {
@@ -2393,6 +2459,10 @@
           "RhinoMocks": {
             "target": "Package",
             "version": "[3.6.1, )"
+          },
+          "System.Data.SQLite.Core": {
+            "target": "Package",
+            "version": "[1.0.113.7, )"
           }
         },
         "imports": [

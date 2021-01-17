@@ -14,6 +14,7 @@ namespace ProjectDatabase.Domain
         {
             Interests = new List<Interest>();
             Requests = new List<Request>();
+            isRegularUser = true;
         }
 
         public virtual void AddInterest(Interest interest)

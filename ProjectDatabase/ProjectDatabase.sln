@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDatabase", "ProjectD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDatababaseTest", "..\ProjectDatababaseTest\ProjectDatababaseTest.csproj", "{E1D2CE46-F989-42E3-8842-CC5F7BEFFC88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterConnect.API", "..\BetterConnect.API\BetterConnect.API.csproj", "{2D4F8357-0708-44CA-99A9-CE99589E29EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterConnect.WebAPI", "..\BetterConnect.WebAPI\BetterConnect.WebAPI.csproj", "{06E118A7-50B2-4B26-8A87-BF15874656D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E1D2CE46-F989-42E3-8842-CC5F7BEFFC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1D2CE46-F989-42E3-8842-CC5F7BEFFC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1D2CE46-F989-42E3-8842-CC5F7BEFFC88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D4F8357-0708-44CA-99A9-CE99589E29EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D4F8357-0708-44CA-99A9-CE99589E29EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D4F8357-0708-44CA-99A9-CE99589E29EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D4F8357-0708-44CA-99A9-CE99589E29EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E118A7-50B2-4B26-8A87-BF15874656D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E118A7-50B2-4B26-8A87-BF15874656D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E118A7-50B2-4B26-8A87-BF15874656D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E118A7-50B2-4B26-8A87-BF15874656D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

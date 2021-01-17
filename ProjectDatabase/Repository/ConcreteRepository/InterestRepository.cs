@@ -24,9 +24,12 @@ namespace ProjectDatabase.Repository.ConcreteRepository
                 return null;
             }
 
-            session.Save(interest);
-            session.BeginTransaction().Commit();
-            return interest;
+            using (var tx = session.BeginTransaction())
+            {
+                session.Save(interest);
+                tx.Commit();
+                return interest;
+            }
         }
 
         public Interest GetByName(string name)

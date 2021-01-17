@@ -19,6 +19,7 @@
     <PackageReference Include="NHibernate" Version="5.3.5" />
     <PackageReference Include="NUnit" Version="3.13.0" />
     <PackageReference Include="RhinoMocks" Version="3.6.1" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
   </ItemGroup>
 
 </Project>

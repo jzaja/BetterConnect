@@ -11,6 +11,7 @@ namespace ProjectDatabase.Domain
         public Admin()
         {
             AdminRole = "admin";
+            isRegularUser = false;
         }
     }
 }

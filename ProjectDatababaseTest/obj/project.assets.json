@@ -1485,7 +1485,8 @@
           "FluentNHibernate": "3.1.0",
           "NHibernate": "5.3.5",
           "NUnit": "3.13.0",
-          "RhinoMocks": "3.6.1"
+          "RhinoMocks": "3.6.1",
+          "System.Data.SQLite.Core": "1.0.113.7"
         },
         "compile": {
           "bin/placeholder/ProjectDatabase.dll": {}

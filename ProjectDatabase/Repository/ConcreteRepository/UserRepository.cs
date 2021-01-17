@@ -16,7 +16,7 @@ namespace ProjectDatabase.Repository.ConcreteRepository
             session = helper.OpenSession();
         }
 
-        public List<User> GetAll()
+        public IList<User> GetAll()
         {
             return session.Query<User>().ToList();
         }
@@ -76,23 +76,31 @@ namespace ProjectDatabase.Repository.ConcreteRepository
 
         public BasicUser Save(BasicUser user)
         {
-            session.Save(user);
-            ITransaction transaction = session.BeginTransaction();
-            transaction.Commit();
-            return user;
+            using (ITransaction tx = session.BeginTransaction())
+            {
+                session.Save(user);
+                tx.Commit();
+                return user;
+            }
         }
 
         public void Update(BasicUser user)
         {
-            session.Update(user);
-            session.BeginTransaction().Commit();
+            using (var tx = session.BeginTransaction())
+            {
+                session.Update(user);
+                tx.Commit();
+            }
         }
 
         public User Delete(User user)
         {
-            session.Delete(user);
-            session.BeginTransaction().Commit();
-            return user;
+            using (var tx = session.BeginTransaction())
+            {
+                session.Delete(user);
+                tx.Commit();
+                return user;
+            }
         }
 
         public long AdminRowCount()

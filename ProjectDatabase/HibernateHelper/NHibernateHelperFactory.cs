@@ -21,7 +21,7 @@ namespace ProjectDatabase.HibernateHelper
                 return new InMemoryNHibernateHelper();
             } else
             {
-                return new NHibernateHelper();
+                return null;
             }
         }
 

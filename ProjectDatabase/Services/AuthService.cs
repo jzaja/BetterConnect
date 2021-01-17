@@ -34,10 +34,10 @@ namespace ProjectDatabase.Services
 
         public User Register(string username, string password, string phoneNumber)
         {
-            if (_userRepo.ExistsByUsernameOrPhoneNumber(username, phoneNumber))
-            {
-                return null;
-            }
+           if (_userRepo.ExistsByUsernameOrPhoneNumber(username, phoneNumber))
+           {
+             return null;
+           }
            
             User newUser = new User { Username = username, Password = password, PhoneNumber = phoneNumber };
             _userRepo.Save(newUser);

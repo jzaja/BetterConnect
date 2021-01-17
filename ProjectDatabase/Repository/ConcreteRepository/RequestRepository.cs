@@ -19,16 +19,22 @@ namespace ProjectDatabase.Repository.ConcreteRepository
 
         public Request Save(Request request)
         {
-            _session.Save(request);
-            _session.BeginTransaction().Commit();
-            return request;
+            using (var tx = _session.BeginTransaction())
+            {
+                _session.Save(request);
+                tx.Commit();
+                return request;
+            }
         }
 
         public Request Update(Request request)
         {
-            _session.Update(request);
-            _session.BeginTransaction().Commit();
-            return request;
+            using (var tx = _session.BeginTransaction())
+            {
+                _session.Update(request);
+                tx.Commit();
+                return request;
+            }
         }
 
         public long RowCount()
@@ -39,7 +45,7 @@ namespace ProjectDatabase.Repository.ConcreteRepository
         public Request ApproveRequest(Request request)
         {
             request.IsConfirmed = true;
-            return Save(request);
+            return Update(request);
         }
 
         public Request DeclineRequest(Request request)

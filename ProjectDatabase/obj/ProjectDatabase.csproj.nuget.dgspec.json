@@ -58,6 +58,10 @@
             "RhinoMocks": {
               "target": "Package",
               "version": "[3.6.1, )"
+            },
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.113.7, )"
             }
           },
           "imports": [
