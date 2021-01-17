@@ -8,12 +8,12 @@ namespace ProjectDatabase.Domain
     {
         public virtual string PhoneNumber { get; set; }
         public virtual IList<Interest> Interests { get; set; }
-        public virtual IList<Request> Requests { get; set; }
+        public virtual ISet<Request> Requests { get; set; }
 
         public User()
         {
             Interests = new List<Interest>();
-            Requests = new List<Request>();
+            Requests = new HashSet<Request>();
             isRegularUser = true;
         }
 

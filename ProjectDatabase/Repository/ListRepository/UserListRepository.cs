@@ -11,7 +11,16 @@ namespace ProjectDatabase.Repository.ListRepository
 
         public long AdminRowCount()
         {
-            throw new NotImplementedException();
+            int count = 0;
+            foreach (BasicUser u in _users)
+            {
+                if (!u.isRegularUser)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         public User Delete(User user)
@@ -21,23 +30,44 @@ namespace ProjectDatabase.Repository.ListRepository
 
         public bool ExistsByUsernameOrPhoneNumber(string username, string phoneNumber)
         {
-            throw new NotImplementedException();
+            foreach (BasicUser u in _users)
+            {
+
+                if (u is User)
+                {
+                    User user = (User)u;
+                    if (user.Username.Equals(username) || user.PhoneNumber.Equals(phoneNumber))
+                    {
+                        return true;
+                    }
+                }
+                
+            }
+
+            return false;
         }
 
         public BasicUser Get(int id)
         {
-            throw new NotImplementedException();
+            foreach (BasicUser u in _users)
+            {
+                if (u.Id == id)
+                {
+                    return u;
+                }
+            }
+
+            return null;
         }
 
         public IList<User> GetAll()
         {
             IList<User> users = new List<User>();
-            foreach (User u in _users)
+            foreach (BasicUser u in _users)
             {
                 if (u.isRegularUser)
                 {
-                    System.Diagnostics.Debug.WriteLine("dodajem");
-                    users.Add(u);
+                    users.Add((User) u);
                 }
             }
 
@@ -46,38 +76,79 @@ namespace ProjectDatabase.Repository.ListRepository
 
         public User GetByPhoneNumber(string phoneNumber)
         {
-            throw new NotImplementedException();
+            foreach (User u in _users)
+            {
+                if (u.PhoneNumber == phoneNumber)
+                {
+                    return u;
+                }
+            }
+
+            return null;
         }
 
         public BasicUser GetByUsername(string username)
         {
-            throw new NotImplementedException();
+            foreach (User u in _users)
+            {
+                if (u.Username.ToLower().Equals(username.ToLower()))
+                {
+                    return u;
+                }
+            }
+
+            return null;
         }
 
         public User GetUser(int id)
         {
-            throw new NotImplementedException();
+            foreach (BasicUser u in _users)
+            {
+                if (u.Id == id)
+                {
+                    return (User) u;
+                }
+            }
+
+            return null;
         }
 
         public long RowCount()
         {
-            throw new NotImplementedException();
+            return _users.Count;
         }
 
         public BasicUser Save(BasicUser user)
         {
+            user.Id = IdGenerator.getId();
             _users.Add(user);
             return user;
         }
 
         public void Update(BasicUser user)
         {
-            throw new NotImplementedException();
+            foreach (BasicUser u in _users)
+            {
+                if (u.Id == user.Id)
+                {
+                    u.Username = user.Username;
+                    u.Password = user.Password;
+                }
+            }
         }
 
         public long UsersRowCount()
         {
-            throw new NotImplementedException();
+            int count = 0;
+            foreach (BasicUser u in _users)
+            {
+                if (u.isRegularUser)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }

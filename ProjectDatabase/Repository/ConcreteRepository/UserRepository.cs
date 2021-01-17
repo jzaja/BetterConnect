@@ -88,7 +88,8 @@ namespace ProjectDatabase.Repository.ConcreteRepository
         {
             using (var tx = session.BeginTransaction())
             {
-                session.Update(user);
+                //session.Update(user);
+                session.Merge(user);
                 tx.Commit();
             }
         }

@@ -17,7 +17,6 @@ namespace ProjectDatabase.Mappings
             Map(x => x.Name).Not.Nullable().Unique();
             HasManyToMany(x => x.Users)
                 .Cascade.All()
-                .Inverse()
                 .Table("UserInterest");
         }
     }

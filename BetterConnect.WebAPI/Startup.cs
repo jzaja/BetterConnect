@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft;
 
 namespace BetterConnect.WebAPI
 {
@@ -35,8 +36,8 @@ namespace BetterConnect.WebAPI
 
             // DI
             services.AddTransient<INHibernateHelper, InMemoryNHibernateHelper>();
-            services.AddSingleton<IUserRepository, UserRepository>();
-            services.AddSingleton<IInterestRepository, InterestRepository>();
+            services.AddSingleton<IUserRepository, UserListRepository>();
+            services.AddSingleton<IInterestRepository, InterestListRepository>();
 
             services.AddSwaggerGen(c =>
             {

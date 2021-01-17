@@ -7,8 +7,10 @@ namespace ProjectDatabase.Repository
 {
     public interface IInterestRepository
     {
+        IList<Interest> GetAll();
         Interest Save(Interest interest);
+        Interest Update(Interest interest);
         Interest GetByName(string name);
-        IList<User> GetUsersByInterestName(string interestName);
+        ISet<User> GetUsersByInterestName(string interestName);
     }
 }

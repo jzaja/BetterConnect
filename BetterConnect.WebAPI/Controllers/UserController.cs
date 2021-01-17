@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 namespace BetterConnect.WebAPI.Controllers
 {
     [ApiController]
-    [Route("/api/auth")]
-    public class AuthController : Controller
+    [Route("/api/users")]
+    public class UserController : Controller
     {
         IUserRepository _userRepo;
         IInterestRepository _interestRepo;
@@ -20,7 +20,7 @@ namespace BetterConnect.WebAPI.Controllers
         AuthService _authService;
         UserService _userService;
 
-        public AuthController(IUserRepository userRepository, IInterestRepository interestRepository)
+        public UserController(IUserRepository userRepository, IInterestRepository interestRepository)
         {
             this._userRepo = userRepository;
             this._interestRepo = interestRepository;
@@ -29,22 +29,16 @@ namespace BetterConnect.WebAPI.Controllers
             _userService = new UserService(_userRepo, _interestRepo);
         }
 
-        [HttpGet("getAll")]
-        public IList<User> GetAll()
+        [HttpPut("addInterest")]
+        public User AddInterest(InterestUpdateDTO interestUpdateDTO)
         {
-            return _userService.GetAllUsers();
+            return _userService.AddInterest(interestUpdateDTO.UserId, interestUpdateDTO.InterestName);
         }
 
-        [HttpPost("register")]
-        public BasicUser Register(RegisterUserDTO registerUserDTO)
+        [HttpPut("removeInterest")]
+        public User removeInterest(InterestUpdateDTO interestUpdateDTO)
         {
-            return _authService.Register(registerUserDTO.Username, registerUserDTO.Password, registerUserDTO.PhoneNumber);
-        }
-
-        [HttpGet("login")]
-        public BasicUser Login(LoginUserDTO loginUserDTO)
-        {
-            return _authService.Login(loginUserDTO.Username, loginUserDTO.Password);
+            return _userService.RemoveInterest(interestUpdateDTO.UserId, interestUpdateDTO.InterestName);
         }
 
     }

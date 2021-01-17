@@ -27,19 +27,25 @@ namespace ProjectDatabase.Services
             User user = (User)_userRepo.Get(userId);
             Interest interest = _interestRepository.GetByName(interestName);
 
+            if (user.Interests.Contains(interest))
+            {
+                return null;
+            }
+
             if (interest == null)
             {
                 Interest newInterest = new Interest { Name = interestName };
-                user.AddInterest(newInterest);
+
+                var saved = _interestRepository.Save(newInterest);
+                saved.AddUser(user);
+                
+                _interestRepository.Update(saved);
             } else
             {
-                if (!user.Interests.Contains(interest))
-                {
-                    user.AddInterest(interest);
-                }
+                interest.AddUser(user);
+                _interestRepository.Update(interest);
             }
 
-            _userRepo.Save(user);
             return user;
         }
 
@@ -55,7 +61,8 @@ namespace ProjectDatabase.Services
             }
 
             user.RemoveInterest(interest);
-            _userRepo.Save(user);
+
+            _interestRepository.Update(interest);
             return user;
         }
 

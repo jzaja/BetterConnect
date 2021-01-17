@@ -17,17 +17,26 @@ namespace ProjectDatabase.Repository.ConcreteRepository
             session = helper.OpenSession();
         }
 
+        public IList<Interest> GetAll()
+        {
+            return session.Query<Interest>().ToList();
+        }
+
         public Interest Save(Interest interest)
         {
-            if (GetByName(interest.Name) != null)
-            {
-                return null;
-            }
-
             using (var tx = session.BeginTransaction())
             {
                 session.Save(interest);
                 tx.Commit();
+                return interest;
+            }
+        }
+
+        public Interest Update(Interest interest)
+        {
+            using (var tx = session.BeginTransaction())
+            {
+                session.Merge(interest);
                 return interest;
             }
         }
@@ -37,9 +46,15 @@ namespace ProjectDatabase.Repository.ConcreteRepository
             return session.Query<Interest>().Where(i => i.Name.ToLower().Equals(name.ToLower())).SingleOrDefault();
         }
 
-        public IList<User> GetUsersByInterestName(string interestName)
+        public ISet<User> GetUsersByInterestName(string interestName)
         {
             Interest interest = GetByName(interestName);
+
+            if (interest == null)
+            {
+                return null;
+            }
+
             return interest.Users;
         }
 

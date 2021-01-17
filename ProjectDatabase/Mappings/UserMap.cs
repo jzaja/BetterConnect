@@ -13,13 +13,10 @@ namespace ProjectDatabase.Mappings
 
         public UserMap()
         {
-            //Table("User");
-            //Id(x => x.Id).GeneratedBy.Identity().Column("Id");
-           // Map(x => x.Username).Not.Nullable().Unique();
-            //Map(x => x.Password).Not.Nullable();
             Map(x => x.PhoneNumber).Not.Nullable();
             HasManyToMany(x => x.Interests)
                 .Cascade.All()
+                .Inverse()
                 .Table("UserInterest");
             HasMany(x => x.Requests);
         }

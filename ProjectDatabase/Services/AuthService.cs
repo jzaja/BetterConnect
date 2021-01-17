@@ -46,6 +46,11 @@ namespace ProjectDatabase.Services
 
         private BasicUser GetByUsername(string username)
         {
+            if (username == null)
+            {
+                return null;
+            }
+
             return _userRepo.GetByUsername(username.ToLower());
         }
 

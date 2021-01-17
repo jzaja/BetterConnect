@@ -39,22 +39,6 @@ namespace ProjectDatababaseTest.RepositoryTest
         }
 
         [Test]
-        public void TestAddExistingInterest()
-        {
-            var interest = new Interest { Name = "Skijanje" };
-            var saved = _interestRepo.Save(interest);
-            Assert.NotNull(saved);
-
-            var alreadyExisting = new Interest { Name = "Skijanje" };
-            var notSaved = _interestRepo.Save(alreadyExisting);
-            Assert.Null(notSaved);
-
-            var alreadyExisting2 = new Interest { Name = "skIjanjE" };
-            var notSaved2 = _interestRepo.Save(alreadyExisting2);
-            Assert.Null(notSaved2);
-        }
-
-        [Test]
         public void TestGetUsersByInterestName()
         {
             var interest = new Interest { Name = "skijanje" };
