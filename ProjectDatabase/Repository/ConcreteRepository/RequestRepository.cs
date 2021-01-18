@@ -59,5 +59,10 @@ namespace ProjectDatabase.Repository.ConcreteRepository
             return _session.Query<Request>().Where(x => x.SenderId == senderId && x.ReceiverId == receiverId).SingleOrDefault();
         }
 
+        public IList<Request> GetAll()
+        {
+            return _session.Query<Request>().ToList();
+        }
+
     }
 }

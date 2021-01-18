@@ -38,6 +38,7 @@ namespace BetterConnect.WebAPI
             services.AddTransient<INHibernateHelper, InMemoryNHibernateHelper>();
             services.AddSingleton<IUserRepository, UserListRepository>();
             services.AddSingleton<IInterestRepository, InterestListRepository>();
+            services.AddSingleton<IRequestRepository, RequestListRepository>();
 
             services.AddSwaggerGen(c =>
             {

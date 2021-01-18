@@ -7,6 +7,7 @@ namespace ProjectDatabase.Repository
 {
     public interface IRequestRepository
     {
+        IList<Request> GetAll();
         Request Save(Request request);
         Request Update(Request request);
         Request GetByKey(int senderId, int receiverId);

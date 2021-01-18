@@ -31,8 +31,8 @@ namespace ProjectDatabase.Services
 
             sender.AddRequest(req);
             receiver.AddRequest(req);
-            _userRepository.Save(sender);
-            _userRepository.Save(receiver);
+            _userRepository.Update(sender);
+            _userRepository.Update(receiver);
             return _requestRepository.Save(req);
         }
 
@@ -62,6 +62,48 @@ namespace ProjectDatabase.Services
         private bool IsLogicRight(User sender, int senderId, User receiver, int receiverId)
         {
             return receiver.Id == receiver.Id && sender.Id == senderId;
+        }
+
+        public IList<Request> GetSent(int senderId)
+        {
+            return GetRequests(senderId, true);
+        }
+
+        public IList<Request> GetReceived(int receiverId)
+        {
+            return GetRequests(receiverId, false);
+        }
+
+        private IList<Request> GetRequests(int userId, bool isSender)
+        {
+            var user = _userRepository.GetUser(userId);
+            if (user == null)
+            {
+                return null;
+            }
+
+            var userRequests = user.Requests;
+
+            var wanted = new List<Request>();
+            foreach (Request req in userRequests)
+            {
+                if (isSender)
+                {
+                    if (req.SenderId == user.Id)
+                    {
+                        wanted.Add(req);
+                    }
+                } else
+                {
+                    if (req.ReceiverId == user.Id)
+                    {
+                        wanted.Add(req);
+                    }
+                }
+                
+            }
+
+            return wanted;
         }
 
     }
