@@ -7,7 +7,8 @@ namespace ProjectDatabase.Repository
 {
     public interface IUserRepository
     {
-        IList<User> GetAll();
+        IList<BasicUser> GetAll();
+        IList<User> GetAllUsers();
         BasicUser Get(int id);
         BasicUser GetByUsername(string username);
         User GetByPhoneNumber(string phoneNumber);

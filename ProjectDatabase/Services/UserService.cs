@@ -17,9 +17,14 @@ namespace ProjectDatabase.Services
             _interestRepository = interestRepository;
         }
 
-        public IList<User> GetAllUsers()
+        public IList<BasicUser> GetAll()
         {
             return _userRepo.GetAll();
+        }
+
+        public IList<User> GetAllUsers()
+        {
+            return _userRepo.GetAllUsers();
         }
 
         public User AddInterest(int userId, string interestName)
@@ -66,6 +71,24 @@ namespace ProjectDatabase.Services
             return user;
         }
 
+        public User BlockUser(int adminId, int userId)
+        {
+            var adminBasicUser = _userRepo.Get(adminId);
+            var user = _userRepo.GetUser(userId);
+
+            // if im really an admin
+            if (!adminBasicUser.isRegularUser)
+            {
+                user.Username = "Blocked";
+                user.PhoneNumber = "000 000 000";
+
+                return user;
+            }
+
+            return null;
+        }
+
+        // this method is not used, instead upper method for blocking the user is used
         public User DeleteUser(int adminId, int userId)
         {
             // only admin can delete user from system

@@ -30,7 +30,13 @@ namespace BetterConnect.WebAPI.Controllers
         }
 
         [HttpGet("getAll")]
-        public IList<User> GetAll()
+        public IList<BasicUser> GetAll()
+        {
+            return _userService.GetAll();
+        }
+
+        [HttpGet("getAllUsers")]
+        public IList<User> GetAllUsers()
         {
             return _userService.GetAllUsers();
         }
@@ -39,6 +45,12 @@ namespace BetterConnect.WebAPI.Controllers
         public BasicUser Register(RegisterUserDTO registerUserDTO)
         {
             return _authService.Register(registerUserDTO.Username, registerUserDTO.Password, registerUserDTO.PhoneNumber);
+        }
+
+        [HttpPost("registerAdmin")]
+        public Admin RegisterAdmin(RegisterAdminDTO registerAdminDTO)
+        {
+            return _authService.RegisterAdmin(registerAdminDTO.Password);
         }
 
         [HttpGet("login")]

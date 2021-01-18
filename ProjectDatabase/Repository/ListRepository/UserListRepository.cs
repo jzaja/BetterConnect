@@ -60,7 +60,12 @@ namespace ProjectDatabase.Repository.ListRepository
             return null;
         }
 
-        public IList<User> GetAll()
+        public IList<BasicUser> GetAll()
+        {
+            return _users;
+        }
+
+        public IList<User> GetAllUsers()
         {
             IList<User> users = new List<User>();
             foreach (BasicUser u in _users)

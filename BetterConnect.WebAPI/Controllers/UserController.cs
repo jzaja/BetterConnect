@@ -36,9 +36,15 @@ namespace BetterConnect.WebAPI.Controllers
         }
 
         [HttpPut("removeInterest")]
-        public User removeInterest(InterestUpdateDTO interestUpdateDTO)
+        public User RemoveInterest(InterestUpdateDTO interestUpdateDTO)
         {
             return _userService.RemoveInterest(interestUpdateDTO.UserId, interestUpdateDTO.InterestName);
+        }
+
+        [HttpPut("blockUser/{adminId}/{userId}")]
+        public User BlockUser(int adminId, int userId)
+        {
+            return _userService.BlockUser(adminId, userId);
         }
 
     }
