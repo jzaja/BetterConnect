@@ -76,7 +76,7 @@ namespace ProjectDatabase.Services
             var adminBasicUser = _userRepo.Get(adminId);
             var user = _userRepo.GetUser(userId);
 
-            // if im really an admin
+            // if it is really an admin
             if (!adminBasicUser.isRegularUser)
             {
                 user.Username = "Blocked";
