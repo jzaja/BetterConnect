@@ -80,3 +80,7 @@ C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\BetterConnectOO.csproj.CopyComplete
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\BetterConnectOO.exe
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\BetterConnectOO.pdb
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\System.Net.Http.Formatting.xml

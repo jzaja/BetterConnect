@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BetterConnectOO.API;
+using BetterConnectOO.Models;
 
 namespace BetterConnectOO
 {
@@ -32,13 +34,15 @@ namespace BetterConnectOO
             Login.Close();
         }
 
-        private void LoginButton(object sender, RoutedEventArgs e)
+        private async void LoginButton(object sender, RoutedEventArgs e)
         {
-            
+            IList<User> users = await APIManager.GetUserAsync("dada");
+            MessageBox.Show(users.Count.ToString());
 
             GeneralWindow generalWindow = new GeneralWindow();
             generalWindow.Show();
             Login.Close();
         }
+
     }
 }
