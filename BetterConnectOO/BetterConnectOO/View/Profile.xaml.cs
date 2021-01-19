@@ -12,16 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace BetterConnectOO
+namespace BetterConnectOO.View
 {
     /// <summary>
-    /// Interaction logic for GeneralWindow.xaml
+    /// Interaction logic for Profile.xaml
     /// </summary>
-    public partial class GeneralWindow : Window
+    public partial class Profile : Window
     {
-        public GeneralWindow()
+        public Profile()
         {
             InitializeComponent();
+        }
+
+        private void BackButton(object sender, RoutedEventArgs e)
+        {
+            GeneralWindow generalWindow = new GeneralWindow();
+            generalWindow.Show();
+            ProfileWindow.Close();
+
         }
     }
 }
