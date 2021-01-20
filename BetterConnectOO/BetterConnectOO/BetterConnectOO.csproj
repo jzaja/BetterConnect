@@ -75,9 +75,11 @@
     <Compile Include="API\APIConstants.cs" />
     <Compile Include="API\APIManager.cs" />
     <Compile Include="Models\BasicUser.cs" />
+    <Compile Include="Models\Interest.cs" />
     <Compile Include="Models\LoginUserDTO.cs" />
     <Compile Include="Models\RegisterUserDTO.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="ViewModels\UsersViewModel.cs" />
     <Compile Include="View\GeneralWindow.xaml.cs">
       <DependentUpon>GeneralWindow.xaml</DependentUpon>
     </Compile>

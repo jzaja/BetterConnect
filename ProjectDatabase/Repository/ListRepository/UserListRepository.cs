@@ -14,7 +14,7 @@ namespace ProjectDatabase.Repository.ListRepository
             int count = 0;
             foreach (BasicUser u in _users)
             {
-                if (!u.isRegularUser)
+                if (!u.IsRegularUser)
                 {
                     count++;
                 }
@@ -70,7 +70,7 @@ namespace ProjectDatabase.Repository.ListRepository
             IList<User> users = new List<User>();
             foreach (BasicUser u in _users)
             {
-                if (u.isRegularUser)
+                if (u.IsRegularUser)
                 {
                     users.Add((User) u);
                 }
@@ -147,7 +147,7 @@ namespace ProjectDatabase.Repository.ListRepository
             int count = 0;
             foreach (BasicUser u in _users)
             {
-                if (u.isRegularUser)
+                if (u.IsRegularUser)
                 {
                     count++;
                 }

@@ -12,22 +12,18 @@ namespace BetterConnectOO.API
     public class APIManager
     {
         static HttpClient client = new HttpClient();
-        public static async Task<IList<User>> GetUserAsync(string username)
+        public static async Task<IList<User>> GetAllUsers()
         {
             string path = APIConstants.AuthBaseURL + "/getAll";
 
-            IList<User> user = null;
+            IList<User> users = null;
             HttpResponseMessage response = await client.GetAsync(path);
             if (response.IsSuccessStatusCode)
             {
-                Trace.WriteLine("USPJEH");
-                user = await response.Content.ReadAsAsync<IList<User>>();
-            } else
-            {
-                Trace.WriteLine("NEUSPJEH");
+                users = await response.Content.ReadAsAsync<IList<User>>();
             }
 
-            return user;
+            return users;
         }
 
         public static async Task<User> RegisterNewUser(string username, string password, string phoneNumber)

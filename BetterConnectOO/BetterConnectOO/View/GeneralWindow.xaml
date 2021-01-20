@@ -6,13 +6,18 @@
         xmlns:local="clr-namespace:BetterConnectOO"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="BetterConnect" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+        Title="BetterConnect" Height="500" Width="1001" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
             <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1" Background="White"/>
+        <Grid Grid.Column="1" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="33*"/>
+                <ColumnDefinition Width="142*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <StackPanel Grid.Column="0" Background="#FF1C94F4">
             <StackPanel Orientation="Horizontal" Background="White">
                 <Image Width="300" Height="100" Source="/Images/Logo/BetterConnect.png"/>
@@ -23,8 +28,20 @@
             <TextBox FontSize="16" materialDesign:HintAssist.Hint="Pretraživanje" Margin="20 10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="1">
-            
+        <StackPanel Grid.Column="1" Margin="0,0,-291,0">
+            <ListView Name="UserGrid" Margin="10" ItemsSource="{Binding Users}">
+
+                <ListViewItem>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="20" Foreground="#FF1C94F4" Text="{Binding username}" >Username</TextBlock>
+                            <TextBlock>Nogomet, Tenis, zvucnici</TextBlock>
+                        </StackPanel>
+                        <Button Margin="340,0,0,0">Pošalji zahtjev</Button>
+                    </StackPanel>
+                </ListViewItem>
+           
+            </ListView>
         </StackPanel>
         
     </Grid>

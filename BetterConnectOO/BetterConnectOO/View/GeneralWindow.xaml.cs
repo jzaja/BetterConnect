@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BetterConnectOO.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace BetterConnectOO
     /// </summary>
     public partial class GeneralWindow : Window
     {
+        
         public GeneralWindow()
         {
+            //UsersViewModel VM = new UsersViewModel();
+            //DataContext = VM;
+
             InitializeComponent();
+
         }
 
         private void EditProfile(object sender, RoutedEventArgs e)

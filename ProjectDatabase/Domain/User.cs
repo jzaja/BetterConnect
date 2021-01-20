@@ -14,7 +14,7 @@ namespace ProjectDatabase.Domain
         {
             Interests = new List<Interest>();
             Requests = new HashSet<Request>();
-            isRegularUser = true;
+            IsRegularUser = true;
         }
 
         public virtual void AddInterest(Interest interest)
