@@ -31,5 +31,12 @@ namespace BetterConnectOO.View
             ProfileWindow.Close();
 
         }
+
+        private void EditProfileButton(object sender, RoutedEventArgs e)
+        {
+            EditProfile editProfile = new EditProfile();
+            editProfile.Show();
+            ProfileWindow.Close();
+        }
     }
 }

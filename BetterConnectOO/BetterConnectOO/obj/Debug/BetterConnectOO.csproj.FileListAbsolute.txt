@@ -52,3 +52,5 @@ C:\Users\Josip\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\BetterCon
 C:\Users\Josip\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\Profile.g.cs
 C:\Users\Josip\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\Profile.baml
 C:\Users\Josip\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\BetterConnectOO.csprojAssemblyReference.cache
+C:\Users\Josip\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\EditProfile.g.cs
+C:\Users\Josip\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\EditProfile.baml

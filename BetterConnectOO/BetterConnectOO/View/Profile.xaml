@@ -19,7 +19,7 @@
             </StackPanel>
         </Border>
         <Image Width="100" Height="100" Source="/Images/user.png" HorizontalAlignment="Center" Margin="146.8,120,146.8,351.2"/>
-        <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Margin="50" Content="Uredi profil"/>
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Margin="50" Content="Uredi profil" Click="EditProfileButton"/>
         <TextBlock FontSize="16" FontWeight="Bold" Text="Korisničko ime" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,300" Height="30" Width="150"/>
         <TextBlock FontSize="16" FontWeight="Bold" Text="Broj mobitela" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,260" Height="30" Width="150"/>
         <TextBlock FontSize="16" FontWeight="Bold" Text="Vlastiti interesi:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,220" Height="30" Width="150"/>
