@@ -18,11 +18,11 @@
                     <Button x:Name="LoginScreenButton" Content="Prijava" HorizontalAlignment="Right" Click="LoginScreenButton_Click"/>
                 </Grid>
 
-                <TextBox materialDesign:HintAssist.Hint="Korisničko ime" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Lozinka" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0 5"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Potvrdite lozinku" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0 5"/>
-                <TextBox materialDesign:HintAssist.Hint="Broj mobitela" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
-                <Button Content="Registracija" Margin="0 20"/>
+                <TextBox x:Name="UsernameTextBox" materialDesign:HintAssist.Hint="Korisničko ime" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="Lozinka" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0 5"/>
+                <PasswordBox x:Name="RepeatPasswordTextBox" materialDesign:HintAssist.Hint="Potvrdite lozinku" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0 5"/>
+                <TextBox x:Name="PhoneNumberTextBox" materialDesign:HintAssist.Hint="Broj mobitela" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <Button Content="Registracija" Margin="0 20" Click="Registration_Click"/>
             </StackPanel>
         </Border>
 

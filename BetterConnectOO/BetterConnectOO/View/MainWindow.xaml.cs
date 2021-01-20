@@ -36,12 +36,20 @@ namespace BetterConnectOO
 
         private async void LoginButton(object sender, RoutedEventArgs e)
         {
-            IList<User> users = await APIManager.GetUserAsync("dada");
-            MessageBox.Show(users.Count.ToString());
+            string username = UsernameTextBox.Text;
+            string password = PasswordTextBox.Password;
 
-            GeneralWindow generalWindow = new GeneralWindow();
-            generalWindow.Show();
-            Login.Close();
+            User logedUser = await APIManager.LoginUser(username, password);
+
+            if (logedUser != null)
+            {
+                GeneralWindow generalWindow = new GeneralWindow();
+                generalWindow.Show();
+                Login.Close();
+            } else
+            {
+                MessageBox.Show("Invalid credentials!");
+            }
         }
 
     }

@@ -14,7 +14,7 @@ namespace BetterConnectOO.API
         static HttpClient client = new HttpClient();
         public static async Task<IList<User>> GetUserAsync(string username)
         {
-            string path = "https://localhost:44355/api/auth/getAll";
+            string path = APIConstants.AuthBaseURL + "/getAll";
 
             IList<User> user = null;
             HttpResponseMessage response = await client.GetAsync(path);
@@ -28,6 +28,29 @@ namespace BetterConnectOO.API
             }
 
             return user;
+        }
+
+        public static async Task<User> RegisterNewUser(string username, string password, string phoneNumber)
+        {
+            string path = APIConstants.AuthBaseURL + "/register";
+
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, new RegisterUserDTO { Username = username, Password = password, PhoneNumber = phoneNumber });
+            response.EnsureSuccessStatusCode();
+
+            User user = await response.Content.ReadAsAsync<User>();
+            return user;
+        }
+
+        public static async Task<User> LoginUser(string username, string password)
+        {
+            string path = APIConstants.AuthBaseURL + "/login";
+
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, new LoginUserDTO { Username = username, Password = password });
+            response.EnsureSuccessStatusCode();
+
+            User user = await response.Content.ReadAsAsync<User>();
+            return user;
+
         }
 
     }

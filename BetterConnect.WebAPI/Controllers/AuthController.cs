@@ -53,7 +53,7 @@ namespace BetterConnect.WebAPI.Controllers
             return _authService.RegisterAdmin(registerAdminDTO.Password);
         }
 
-        [HttpGet("login")]
+        [HttpPost("login")]
         public BasicUser Login(LoginUserDTO loginUserDTO)
         {
             return _authService.Login(loginUserDTO.Username, loginUserDTO.Password);
