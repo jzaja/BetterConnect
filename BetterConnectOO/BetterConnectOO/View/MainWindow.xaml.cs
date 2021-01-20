@@ -34,6 +34,8 @@ namespace BetterConnectOO
 
         private void LoginButton(object sender, RoutedEventArgs e)
         {
+            
+
             GeneralWindow generalWindow = new GeneralWindow();
             generalWindow.Show();
             Login.Close();
