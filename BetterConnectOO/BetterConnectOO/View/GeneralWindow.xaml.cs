@@ -30,5 +30,11 @@ namespace BetterConnectOO
             profile.Show();
             GeneralWindow1.Close();
         }
+
+        private void RequirementsButton(object sender, RoutedEventArgs e)
+        {
+            View.Requirements requirements = new View.Requirements();
+            requirements.Show();
+        }
     }
 }
