@@ -42,16 +42,16 @@ namespace BetterConnectOO
 
             User logedUser = await APIManager.LoginUser(username, password);
 
-            if (logedUser != null)
-            {
+            //if (logedUser != null)
+            //{
                 GeneralWindow generalWindow = new GeneralWindow();
 
                 generalWindow.Show();
                 Login.Close();
-            } else
-            {
-                MessageBox.Show("Invalid credentials!");
-            }
+            //} else
+            //{
+               // MessageBox.Show("Invalid credentials!");
+            //}
         }
 
     }

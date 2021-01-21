@@ -23,11 +23,10 @@ namespace BetterConnectOO
         
         public GeneralWindow()
         {
-            //UsersViewModel VM = new UsersViewModel();
-            //DataContext = VM;
-
             InitializeComponent();
 
+            UsersViewModel VM = new UsersViewModel();
+            DataContext = VM;
         }
 
         private void EditProfile(object sender, RoutedEventArgs e)
@@ -36,5 +35,6 @@ namespace BetterConnectOO
             profile.Show();
             GeneralWindow1.Close();
         }
+
     }
 }

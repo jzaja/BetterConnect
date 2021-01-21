@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BetterConnectOO"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="BetterConnect" Height="500" Width="1001" WindowStartupLocation="CenterScreen">
+        Title="BetterConnect" Height="500" Width="1021" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
@@ -28,19 +28,32 @@
             <TextBox FontSize="16" materialDesign:HintAssist.Hint="Pretraživanje" Margin="20 10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="0,0,-291,0">
-            <ListView Name="UserGrid" Margin="10" ItemsSource="{Binding Users}">
+        <StackPanel Grid.Column="1" Margin="0,0,-311,0">
+            <ListView Name="UserGrid" Margin="10" ItemsSource="{ Binding Users }">
 
-                <ListViewItem>
-                    <StackPanel Orientation="Horizontal">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20" Foreground="#FF1C94F4" Text="{Binding username}" >Username</TextBlock>
-                            <TextBlock>Nogomet, Tenis, zvucnici</TextBlock>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20" Foreground="#FF1C94F4" Text="{Binding username}"></TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Margin="5" Padding="5" BorderThickness="1" BorderBrush="Red" Background="AntiqueWhite" CornerRadius="10">
+                                        <TextBlock Text="{Binding username}"/>
+                                    </Border>
+                                    <Border Margin="5" Padding="5" BorderThickness="1" BorderBrush="Red" Background="AntiqueWhite" CornerRadius="10">
+                                        <TextBlock Text="Tenis"/>
+                                    </Border>
+                                    <Border Margin="5" Padding="5" BorderThickness="1" BorderBrush="Red" Background="AntiqueWhite" CornerRadius="10">
+                                        <TextBlock Text="twitch"/>
+                                    </Border>
+                                </StackPanel>
+                            </StackPanel>
+                            <Button Margin="300,0,0,0">Pošalji zahtjev</Button>
                         </StackPanel>
-                        <Button Margin="340,0,0,0">Pošalji zahtjev</Button>
-                    </StackPanel>
-                </ListViewItem>
-           
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
             </ListView>
         </StackPanel>
         

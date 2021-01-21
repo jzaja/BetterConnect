@@ -59,7 +59,7 @@ namespace BetterConnectOO.Models
             }
             set
             {
-               IsRegularUser = value;
+                IsRegularUser = value;
                 OnPropertyChanged("isRegularUser");
             }
         }
