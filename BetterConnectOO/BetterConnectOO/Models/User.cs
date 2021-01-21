@@ -43,6 +43,21 @@ namespace BetterConnectOO.Models
         {
             get
             {
+                if (interests != null)
+                {
+                    string finalString = "";
+                    for (int i = 0; i < interests.Count; i++)
+                    {
+                        finalString += interests.ElementAt(i).name;
+                        if (i < interests.Count - 1)
+                        {
+                            finalString += ", ";
+                        }
+                    }
+
+                    InterestsString = finalString;
+                }
+
                 return InterestsString;
             }
             set

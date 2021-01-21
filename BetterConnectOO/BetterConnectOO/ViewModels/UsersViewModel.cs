@@ -39,15 +39,7 @@ namespace BetterConnectOO.ViewModels
         {
             Users = new ObservableCollection<User>();
 
-            var user1 = new User { Username = "desii", password = "nemaa", isRegularUser = true };
-            var user2 = new User { username = "misko", password = "nemaa", isRegularUser = true };
-            var user3 = new User { username = "maleni", password = "nemaa", isRegularUser = true };
-
-            user1.AddInterest(new Interest { name = "nogas" });
-            user1.AddInterest(new Interest { name = "cija majka crnu vunu prede" });
-
-            Users.Add(user1);
-            Users.Add(user2);
+            
 
             FetchUsers();
         }   

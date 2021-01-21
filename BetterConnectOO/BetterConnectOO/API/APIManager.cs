@@ -14,7 +14,7 @@ namespace BetterConnectOO.API
         static HttpClient client = new HttpClient();
         public static async Task<IList<User>> GetAllUsers()
         {
-            string path = APIConstants.AuthBaseURL + "/getAll";
+            string path = APIConstants.AuthBaseURL + "/getAllUsers";
 
             IList<User> users = null;
             HttpResponseMessage response = await client.GetAsync(path);
