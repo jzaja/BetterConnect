@@ -23,14 +23,9 @@ namespace BetterConnectOO.View
     /// </summary>
     /// 
 
-    public interface AddInterestWindowDelegate
-    {
-        void refreshUserInfo(User user);
-    }
-
     public partial class AddInterestWindow : Window
     {
-        public AddInterestWindowDelegate _delegate;
+        //public AddInterestWindowDelegate _delegate;
 
         public AddInterestWindow()
         {
@@ -52,7 +47,7 @@ namespace BetterConnectOO.View
             } else
             {
                 // obavijesti parent window, uzmi usera dobivenog iz responsa i stavi ga za current usera
-                _delegate.refreshUserInfo(user);
+                //_delegate.refreshUserInfo(user);
                 this.Close();
             }
         }

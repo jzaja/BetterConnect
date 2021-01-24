@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BetterConnectOO.API;
 using BetterConnectOO.Models;
+using BetterConnectOO.Models.Singleton;
 
 namespace BetterConnectOO
 {
@@ -49,6 +50,8 @@ namespace BetterConnectOO
                     MessageBox.Show("Missing credentials or user with that credentials already exists!");
                 } else
                 {
+                    CurrentUser.Instance.user = user;
+
                     GeneralWindow window = new GeneralWindow();
                     window.Show();
                     Registration.Close();

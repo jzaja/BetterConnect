@@ -40,7 +40,7 @@ namespace BetterConnectOO.View
 
         private void OnEditButton(object sender, RoutedEventArgs e)
         {
-            AddInterestWindow window = new AddInterestWindow();
+            EditProfile window = new EditProfile();
             window._delegate = this;
             window.Show();
         }
