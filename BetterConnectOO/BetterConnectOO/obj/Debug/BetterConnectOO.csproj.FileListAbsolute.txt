@@ -88,3 +88,5 @@ C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AddInterestWindow.baml
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\EditProfile.g.cs
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\EditProfile.baml
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\RequestsWindow.g.cs
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\RequestsWindow.baml

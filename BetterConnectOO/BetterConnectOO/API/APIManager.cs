@@ -77,5 +77,24 @@ namespace BetterConnectOO.API
             return sentRequest;
         }
 
+        public static Task<IList<Request>> GetSentRequests(int senderId)
+        {
+            string path = APIConstants.RequestBaseURL + "/getSent/" + senderId.ToString();
+            return GetRequests(path, senderId);
+        }
+
+        public static Task<IList<Request>> GetReceivedRequests(int receiverId)
+        {
+            string path = APIConstants.RequestBaseURL + "/getReceived/" + receiverId.ToString();
+            return GetRequests(path, receiverId);
+        }
+
+        private static async Task<IList<Request>> GetRequests(string path, int userId)
+        {
+            HttpResponseMessage response = await client.GetAsync(path);
+            IList<Request> requests = await response.Content.ReadAsAsync<IList<Request>>();
+            return requests;
+        }
+
     }
 }

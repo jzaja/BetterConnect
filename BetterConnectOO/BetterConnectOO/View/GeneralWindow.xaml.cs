@@ -1,4 +1,5 @@
 ﻿using BetterConnectOO.Models;
+using BetterConnectOO.View;
 using BetterConnectOO.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -44,5 +45,10 @@ namespace BetterConnectOO
             _vm.SendRequest(clickedUser.id);
         }
 
+        private void OnRequests(object sender, RoutedEventArgs e)
+        {
+            RequestsWindow window = new RequestsWindow();
+            window.Show();
+        }
     }
 }
