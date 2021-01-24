@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft;
+using ProjectDatabase.Domain;
 
 namespace BetterConnect.WebAPI
 {
@@ -44,6 +45,7 @@ namespace BetterConnect.WebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BetterConnect.WebAPI", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

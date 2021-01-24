@@ -38,9 +38,6 @@ namespace BetterConnectOO.ViewModels
         public UsersViewModel()
         {
             Users = new ObservableCollection<User>();
-
-            
-
             FetchUsers();
         }   
 

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BetterConnectOO.API;
 using BetterConnectOO.Models;
+using BetterConnectOO.Models.Singleton;
 using BetterConnectOO.ViewModels;
 
 namespace BetterConnectOO
@@ -42,16 +43,17 @@ namespace BetterConnectOO
 
             User logedUser = await APIManager.LoginUser(username, password);
 
-            //if (logedUser != null)
-            //{
+            if (logedUser != null)
+            {
+                CurrentUser.Instance.user = logedUser;
                 GeneralWindow generalWindow = new GeneralWindow();
 
                 generalWindow.Show();
                 Login.Close();
-            //} else
-            //{
-               // MessageBox.Show("Invalid credentials!");
-            //}
+            } else
+            {
+                MessageBox.Show("Invalid credentials!");
+            }
         }
 
     }

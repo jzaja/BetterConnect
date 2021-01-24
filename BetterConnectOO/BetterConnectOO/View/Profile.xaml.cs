@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BetterConnectOO.Models.Singleton;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace BetterConnectOO.View
         public Profile()
         {
             InitializeComponent();
+
+            UsernameTextBlock.Text = "Username: " + CurrentUser.Instance.Username;
+            PhoneNumberTextBlock.Text = "Phone number: " + CurrentUser.Instance.PhoneNumber;
+            InterestsTextBlock.Text = "Vlastiti interesi: " + Environment.NewLine + CurrentUser.Instance.AllInterestsString;
         }
 
         private void BackButton(object sender, RoutedEventArgs e)

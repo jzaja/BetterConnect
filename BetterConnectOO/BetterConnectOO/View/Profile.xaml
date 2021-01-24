@@ -6,11 +6,15 @@
         xmlns:local="clr-namespace:BetterConnectOO.View"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Profile" Height="600" Width="400"
+        Title="Profile" Height="600" Width="678.522"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
         Background="#FFDADADA">
     <Grid>
-        <Border Background="White" Margin="20 20 20 20" CornerRadius="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="146*"/>
+            <ColumnDefinition Width="51*"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="White" Margin="20 20 20 20" CornerRadius="15" Grid.ColumnSpan="2">
             <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
                 <Image Width="100" Height="100" Source="/Images/Logo/BetterConnect.png"/>
                 <Grid Margin="0 0 0 0" Height="50" Width="240">
@@ -18,10 +22,10 @@
                 </Grid>
             </StackPanel>
         </Border>
-        <Image Width="100" Height="100" Source="/Images/user.png" HorizontalAlignment="Center" Margin="146.8,120,146.8,351.2"/>
-        <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Margin="50" Content="Uredi profil"/>
-        <TextBlock FontSize="16" FontWeight="Bold" Text="Korisničko ime" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,300" Height="30" Width="150"/>
-        <TextBlock FontSize="16" FontWeight="Bold" Text="Broj mobitela" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,260" Height="30" Width="150"/>
-        <TextBlock FontSize="16" FontWeight="Bold" Text="Vlastiti interesi:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,220" Height="30" Width="150"/>
+        <Image Width="100" Height="100" Source="/Images/user.png" HorizontalAlignment="Center" Margin="147,120,45.15,351"/>
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Margin="97,0,97,50" Content="Uredi profil" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="UsernameTextBlock" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,300" Height="30" Width="349"/>
+        <TextBlock x:Name="PhoneNumberTextBlock" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,260" Height="30" Width="349"/>
+        <TextBlock x:Name="InterestsTextBlock" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="140,0,0,102" Height="148" Width="359"/>
     </Grid>
 </Window>

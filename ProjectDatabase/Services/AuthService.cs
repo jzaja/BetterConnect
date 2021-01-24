@@ -26,7 +26,13 @@ namespace ProjectDatabase.Services
 
             if (user.Password == password)
             {
-                return user;
+                if (user.IsRegularUser)
+                {
+                    return (User)user;
+                } else
+                {
+                    return (Admin)user;
+                }
             }
 
             return null;
