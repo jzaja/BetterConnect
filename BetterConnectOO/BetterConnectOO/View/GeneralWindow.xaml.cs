@@ -1,4 +1,5 @@
-﻿using BetterConnectOO.ViewModels;
+﻿using BetterConnectOO.Models;
+using BetterConnectOO.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,14 @@ namespace BetterConnectOO
     /// </summary>
     public partial class GeneralWindow : Window
     {
-        
+        private UsersViewModel _vm;
+
         public GeneralWindow()
         {
             InitializeComponent();
 
-            UsersViewModel VM = new UsersViewModel();
-            DataContext = VM;
+            _vm = new UsersViewModel();
+            DataContext = _vm;
         }
 
         private void EditProfile(object sender, RoutedEventArgs e)
@@ -34,6 +36,12 @@ namespace BetterConnectOO
             BetterConnectOO.View.Profile profile = new BetterConnectOO.View.Profile();
             profile.Show();
             GeneralWindow1.Close();
+        }
+
+        private void OnSendRequest(object sender, RoutedEventArgs e)
+        {
+            User clickedUser = (User)((sender as Button).DataContext);
+            _vm.SendRequest(clickedUser.id);
         }
 
     }

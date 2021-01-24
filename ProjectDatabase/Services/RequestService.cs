@@ -27,6 +27,12 @@ namespace ProjectDatabase.Services
 
             User sender = _userRepository.GetUser(senderId);
             User receiver = _userRepository.GetUser(receiverId);
+
+            if (sender == null || receiver == null)
+            {
+                return null;
+            }
+
             Request req = new Request { SenderId = sender.Id, ReceiverId = receiver.Id, IsConfirmed = false, IsDeclined = false };
 
             sender.AddRequest(req);

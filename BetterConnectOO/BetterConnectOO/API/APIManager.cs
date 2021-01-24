@@ -68,5 +68,14 @@ namespace BetterConnectOO.API
             return user;
         }
 
+        public static async Task<Request> SendRequest(int senderId, int receiverId)
+        {
+            string path = APIConstants.RequestBaseURL + "/sendRequest";
+
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, new SendRequestDTO { SenderId = senderId, ReceiverId = receiverId });
+            Request sentRequest = await response.Content.ReadAsAsync<Request>();
+            return sentRequest;
+        }
+
     }
 }

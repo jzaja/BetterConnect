@@ -39,7 +39,7 @@
                                 <TextBlock FontSize="20" Foreground="#FF1C94F4" Text="{Binding username}"></TextBlock>
                                 <TextBlock Text="{Binding interestsString}"></TextBlock>
                             </StackPanel>
-                            <Button Margin="150,0,0,0">Pošalji zahtjev</Button>
+                            <Button Margin="150,0,0,0" Click="OnSendRequest" >Pošalji zahtjev</Button>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

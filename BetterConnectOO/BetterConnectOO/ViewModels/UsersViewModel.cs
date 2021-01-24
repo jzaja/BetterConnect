@@ -17,6 +17,7 @@ using BetterConnectOO.Models;
 using BetterConnectOO.ViewModels;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using BetterConnectOO.Models.Singleton;
 
 namespace BetterConnectOO.ViewModels
 {
@@ -44,7 +45,26 @@ namespace BetterConnectOO.ViewModels
         public async void FetchUsers()
         {
             IList<User> allUsers = await APIManager.GetAllUsers();
-            allUsers.ToList().ForEach(Users.Add);
+
+            int currentUserId = CurrentUser.Instance.Id;
+            allUsers.ToList().Where(user => user.id != currentUserId).ToList().ForEach(Users.Add);
+
+            //allUsers.ToList().ForEach(Users.Add);
+        }
+
+        public async void SendRequest(int receiverId)
+        {
+            int myId = CurrentUser.Instance.Id;
+            Request sent = await APIManager.SendRequest(myId, receiverId);
+
+            if (sent == null)
+            {
+                MessageBox.Show("Request already sent!");
+            }
+            else
+            {
+                MessageBox.Show("Request sent!");
+            }
         }
 
         private ICommand mUpdater;
