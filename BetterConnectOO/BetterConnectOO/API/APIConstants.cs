@@ -9,5 +9,6 @@ namespace BetterConnectOO.API
     public class APIConstants
     {
         public static string AuthBaseURL = "https://localhost:44355/api/auth";
+        public static string UsersBaseURL = "https://localhost:44355/api/users";
     }
 }

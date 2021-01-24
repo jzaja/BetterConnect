@@ -1,4 +1,5 @@
-﻿using BetterConnectOO.Models.Singleton;
+﻿using BetterConnectOO.Models;
+using BetterConnectOO.Models.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace BetterConnectOO.View
     /// <summary>
     /// Interaction logic for Profile.xaml
     /// </summary>
-    public partial class Profile : Window
+    public partial class Profile : Window, AddInterestWindowDelegate
     {
         public Profile()
         {
@@ -36,5 +37,19 @@ namespace BetterConnectOO.View
             ProfileWindow.Close();
 
         }
+
+        private void OnEditButton(object sender, RoutedEventArgs e)
+        {
+            AddInterestWindow window = new AddInterestWindow();
+            window._delegate = this;
+            window.Show();
+        }
+
+        public void refreshUserInfo(User user)
+        {
+            CurrentUser.Instance.user = user;
+            InterestsTextBlock.Text = "Vlastiti interesi: " + Environment.NewLine + CurrentUser.Instance.AllInterestsString;
+        }
+
     }
 }

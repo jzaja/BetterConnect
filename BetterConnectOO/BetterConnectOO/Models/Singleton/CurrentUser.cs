@@ -27,6 +27,14 @@ namespace BetterConnectOO.Models.Singleton
 
         }
 
+        public int Id
+        {
+            get
+            {
+                return user.id;
+            }
+        }
+
         public string Username
         {
             get

@@ -84,3 +84,5 @@ C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AddInterestWindow.g.cs
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AddInterestWindow.baml

@@ -76,11 +76,15 @@
     <Compile Include="API\APIManager.cs" />
     <Compile Include="Models\BasicUser.cs" />
     <Compile Include="Models\Interest.cs" />
+    <Compile Include="Models\InterestUpdateDTO.cs" />
     <Compile Include="Models\LoginUserDTO.cs" />
     <Compile Include="Models\RegisterUserDTO.cs" />
     <Compile Include="Models\Singleton\CurrentUser.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ViewModels\UsersViewModel.cs" />
+    <Compile Include="View\AddInterestWindow.xaml.cs">
+      <DependentUpon>AddInterestWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GeneralWindow.xaml.cs">
       <DependentUpon>GeneralWindow.xaml</DependentUpon>
     </Compile>
@@ -90,6 +94,10 @@
     <Compile Include="View\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddInterestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\GeneralWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

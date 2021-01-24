@@ -49,5 +49,24 @@ namespace BetterConnectOO.API
 
         }
 
+        public static Task<User> AddInterest(string interestName, int userId)
+        {
+            string path = APIConstants.UsersBaseURL + "/addInterest";
+            return ManageInterest(path, interestName, userId);
+        }
+
+        public static Task<User> RemoveInterest(string interestName, int userId)
+        {
+            string path = APIConstants.UsersBaseURL + "/removeInterest";
+            return ManageInterest(path, interestName, userId);
+        }
+
+        private static async Task<User> ManageInterest(string path, string interestName, int userId)
+        {
+            HttpResponseMessage response = await client.PutAsJsonAsync(path, new InterestUpdateDTO { InterestName = interestName, UserId = userId });
+            User user = await response.Content.ReadAsAsync<User>();
+            return user;
+        }
+
     }
 }
