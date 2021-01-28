@@ -32,5 +32,6 @@
         </Grid>
         <Button VerticalAlignment="Bottom" Margin="0,80" Width="150" Content="Prijava" Click="LoginButton"/>
         <Button x:Name="NoAccountButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50" Content="Nemate korisnički račun?" Foreground="Gray" Style="{StaticResource MaterialDesignFlatButton}" Click="NoAccountButton_Click"/>
+        <Button Content="Napuni bazu" FontSize="10" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="92" Click="OnFillDatabase" />
     </Grid>
 </Window>

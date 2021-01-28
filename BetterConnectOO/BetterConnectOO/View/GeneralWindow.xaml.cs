@@ -61,5 +61,11 @@ namespace BetterConnectOO
 
             this.Close();
         }
+
+        private void OnSearch(object sender, RoutedEventArgs e)
+        {
+            string searchedInterest = InterestSearchTextBox.Text;
+            _vm.SearchUsersWithInterest(searchedInterest);
+        }
     }
 }

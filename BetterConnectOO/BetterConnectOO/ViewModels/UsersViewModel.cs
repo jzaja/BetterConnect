@@ -66,6 +66,33 @@ namespace BetterConnectOO.ViewModels
             }
         }
 
+        public void SearchUsersWithInterest(string interestName)
+        {
+
+            if (string.IsNullOrWhiteSpace(interestName))
+            {
+                Users.Clear();
+                AllUsers.Instance.Get().ToList().Where(user => user.id != CurrentUser.Instance.Id).ToList().ForEach(Users.Add);
+
+                return;
+            }
+
+            IList<User> searched = new List<User>();
+            foreach (User u in Users)
+            {
+                foreach (Interest interest in u.interests)
+                {
+                    if (interest.name.Equals(interestName))
+                    {
+                        searched.Add(u);
+                    }
+                }
+            }
+
+            Users.Clear();
+            searched.ToList().Where(user => user.id != CurrentUser.Instance.Id).ToList().ForEach(Users.Add);
+        }
+
         private ICommand mUpdater;
         public ICommand UpdateCommand
         {

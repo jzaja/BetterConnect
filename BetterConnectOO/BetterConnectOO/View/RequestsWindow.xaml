@@ -19,7 +19,7 @@
             <ListView Name="UserGrid1" Margin="0,10" Height="308" ItemsSource="{ Binding SentRequestUsers }" SelectionChanged="UserGrid1_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="16" Foreground="Black" Text="{Binding username}"></TextBlock>
                             <TextBlock FontSize="14" Text="{Binding interestsString}"></TextBlock>
                         </StackPanel>
