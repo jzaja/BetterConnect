@@ -16,11 +16,12 @@
                 <TextBlock Text="Poslani zahtjevi" FontSize="16" FontWeight="Bold" Foreground="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="115,0,0,0"/>
             </StackPanel>
 
-            <ListView Name="UserGrid1" Margin="0,10" Height="308" ItemsSource="{ Binding SentRequestUsers }">
+            <ListView Name="UserGrid1" Margin="0,10" Height="308" ItemsSource="{ Binding SentRequestUsers }" SelectionChanged="UserGrid1_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontSize="20" Foreground="Black" Text="{Binding username}"></TextBlock>
+                            <TextBlock FontSize="16" Foreground="Black" Text="{Binding username}"></TextBlock>
+                            <TextBlock FontSize="14" Text="{Binding interestsString}"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -36,8 +37,9 @@
             <ListView Name="UserGrid" Margin="0,10" Height="308" ItemsSource="{ Binding ReceivedRequestUsers }" SelectionChanged="UserGrid_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontSize="20" Foreground="Yellow" Text="{Binding username}"></TextBlock>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="16" Foreground="Yellow" Text="{Binding username}"></TextBlock>
+                            <TextBlock FontSize="14" Text="{Binding interestsString}"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

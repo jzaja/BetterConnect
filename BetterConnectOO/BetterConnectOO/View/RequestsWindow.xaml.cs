@@ -74,5 +74,31 @@ namespace BetterConnectOO.View
             MessageBox.Show("You declined the request!");
         }
 
+        private async void UserGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var clickedIndex = UserGrid1.SelectedIndex;
+            var userReceiver = _vm.SentRequestUsers.ElementAt(clickedIndex);
+            var selectedRequest = _vm._sentRequests.ElementAt(clickedIndex);
+            Request request = await APIManager.GetRequest(selectedRequest.SenderId, selectedRequest.ReceiverId);
+
+            if (!request.IsConfirmed && !request.IsDeclined)
+            {
+                MessageBox.Show("Zahtjev je još na čekanju.");
+            }
+            else
+            {
+                if (request.IsConfirmed)
+                {
+                    MessageBox.Show("Čestitamo! Korisnik: " + userReceiver.username + " je prihvatio Vaš zahtjev. Mobilni broj korisnika je: " + userReceiver.phoneNumber);
+                }
+                else
+                {
+                    if (request.IsDeclined)
+                    {
+                        MessageBox.Show("Nažalost, korisnik: " + userReceiver.username + " je odbio Vaš zahtjev.");
+                    }
+                }
+            }
+        }
     }
 }
