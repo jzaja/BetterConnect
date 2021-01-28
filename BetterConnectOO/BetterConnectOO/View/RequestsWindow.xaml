@@ -15,12 +15,34 @@
             <StackPanel Orientation="Horizontal" Background="White" Height="100">
                 <TextBlock Text="Poslani zahtjevi" FontSize="16" FontWeight="Bold" Foreground="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="115,0,0,0"/>
             </StackPanel>
+
+            <ListView Name="UserGrid1" Margin="0,10" Height="308" ItemsSource="{ Binding SentRequestUsers }">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Black" Text="{Binding username}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackPanel>
         <StackPanel Grid.Column="0" Background="#FF1C94F4">
             <StackPanel Orientation="Horizontal" Background="White">
                 <Image Width="100" Height="100" Source="/Images/Logo/BetterConnect.png"/>
                 <TextBlock FontSize="16" FontWeight="Bold" Foreground="Black" Text="Pristigli zahtjevi" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10,0,0,0"/>
             </StackPanel>
+
+            <ListView Name="UserGrid" Margin="0,10" Height="308" ItemsSource="{ Binding ReceivedRequestUsers }" SelectionChanged="UserGrid_SelectionChanged">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Yellow" Text="{Binding username}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </StackPanel>
 
     </Grid>

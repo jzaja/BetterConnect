@@ -96,5 +96,21 @@ namespace BetterConnectOO.API
             return requests;
         }
 
+        public static async Task<Request> ApproveRequest(int senderId, int receiverId)
+        {
+            string path = APIConstants.RequestBaseURL + "/approveRequest";
+            HttpResponseMessage response = await client.PutAsJsonAsync(path, new SendRequestDTO { SenderId = senderId, ReceiverId = receiverId });
+            Request req = await response.Content.ReadAsAsync<Request>();
+            return req;
+        }
+
+        public static async Task<Request> DeclineRequest(int senderId, int receiverId)
+        {
+            string path = APIConstants.RequestBaseURL + "/declineRequest";
+            HttpResponseMessage response = await client.PutAsJsonAsync(path, new SendRequestDTO { SenderId = senderId, ReceiverId = receiverId });
+            Request req = await response.Content.ReadAsAsync<Request>();
+            return req;
+        }
+
     }
 }

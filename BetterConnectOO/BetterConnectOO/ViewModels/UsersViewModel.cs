@@ -45,11 +45,10 @@ namespace BetterConnectOO.ViewModels
         public async void FetchUsers()
         {
             IList<User> allUsers = await APIManager.GetAllUsers();
+            AllUsers.Instance.Set(allUsers);
 
             int currentUserId = CurrentUser.Instance.Id;
             allUsers.ToList().Where(user => user.id != currentUserId).ToList().ForEach(Users.Add);
-
-            //allUsers.ToList().ForEach(Users.Add);
         }
 
         public async void SendRequest(int receiverId)

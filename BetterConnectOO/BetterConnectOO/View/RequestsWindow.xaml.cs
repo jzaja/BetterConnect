@@ -1,6 +1,7 @@
 ﻿using BetterConnectOO.API;
 using BetterConnectOO.Models;
 using BetterConnectOO.Models.Singleton;
+using BetterConnectOO.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,18 +23,19 @@ namespace BetterConnectOO.View
     /// </summary>
     public partial class RequestsWindow : Window
     {
+        private RequestsViewModel _vm;
         public RequestsWindow()
         {
             InitializeComponent();
 
-            Fetch();
+            _vm = new RequestsViewModel();
+            this.DataContext = _vm;
         }
 
-        private async void Fetch()
+        private void UserGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int myId = CurrentUser.Instance.Id;
-            IList<Request> requests = await APIManager.GetReceivedRequests(myId);
+            var clickedIndex = UserGrid.SelectedIndex;
+            MessageBox.Show(clickedIndex.ToString());
         }
-
     }
 }
