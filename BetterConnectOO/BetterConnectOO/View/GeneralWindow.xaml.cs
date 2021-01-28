@@ -1,4 +1,5 @@
 ﻿using BetterConnectOO.Models;
+using BetterConnectOO.Models.Singleton;
 using BetterConnectOO.View;
 using BetterConnectOO.ViewModels;
 using System;
@@ -49,6 +50,16 @@ namespace BetterConnectOO
         {
             RequestsWindow window = new RequestsWindow();
             window.Show();
+        }
+
+        private void OnLogout(object sender, RoutedEventArgs e)
+        {
+            CurrentUser.Instance.user = null;
+
+            MainWindow window = new MainWindow();
+            window.Show();
+
+            this.Close();
         }
     }
 }

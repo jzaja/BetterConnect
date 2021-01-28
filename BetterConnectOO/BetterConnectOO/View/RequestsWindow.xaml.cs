@@ -33,7 +33,6 @@ namespace BetterConnectOO.View
         {
             int myId = CurrentUser.Instance.Id;
             IList<Request> requests = await APIManager.GetReceivedRequests(myId);
-            MessageBox.Show(requests.Count.ToString());
         }
 
     }
