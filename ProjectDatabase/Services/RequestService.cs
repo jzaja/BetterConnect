@@ -17,6 +17,11 @@ namespace ProjectDatabase.Services
             this._userRepository = userRepo;
         }
 
+        public Request GetRequest(int senderId, int receiverId)
+        {
+            return _requestRepository.GetByKey(senderId, receiverId);
+        }
+
         public Request SendRequest(int senderId, int receiverId)
         {
             // ako request vec postoji

@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BetterConnectOO.View"
         mc:Ignorable="d"
-        Title="AcceptDeclineWindow" Height="287.022" Width="428.773">
+        Title="AcceptDeclineWindow" Height="245.022" Width="428.773">
     <Grid>
         <Label Content="Zahtjev šalje:" HorizontalAlignment="Left" Margin="172,45,0,0" VerticalAlignment="Top"/>
-        <Label Content="tams35&#xD;&#xA;" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontWeight="Bold" Margin="105,69,0,0" VerticalAlignment="Top" Height="25" Width="214"/>
+        <Label Name="UsernameLabel" Content="tams35&#xD;&#xA;" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontWeight="Bold" Margin="105,69,0,0" VerticalAlignment="Top" Height="25" Width="214"/>
+        <Button Content="Prihvati" Background="Green" HorizontalAlignment="Left" Margin="84,145,0,0" VerticalAlignment="Top" Width="95" Click="OnAccept"/>
+        <Button Content="Odbij" Background="Red" HorizontalAlignment="Left" Margin="244,145,0,0" VerticalAlignment="Top" Width="95" Click="OnDecline" />
 
     </Grid>
 </Window>

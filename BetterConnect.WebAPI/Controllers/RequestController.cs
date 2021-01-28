@@ -51,6 +51,12 @@ namespace BetterConnect.WebAPI.Controllers
             return _requestService.UpdateRequest(sendRequestDTO.SenderId, sendRequestDTO.ReceiverId, false, true);
         }
 
+        [HttpGet("get/{senderId}/{receiverId}")]
+        public Request GetRequest(int senderId, int receiverId)
+        {
+            return _requestService.GetRequest(senderId, receiverId);
+        }
+
         // returns requests that was sent by senderId
         [HttpGet("getSent/{senderId}")]
         public IList<Request> GetSentBy(int senderId)

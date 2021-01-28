@@ -23,8 +23,8 @@ namespace BetterConnectOO.ViewModels
 {
     class RequestsViewModel
     {
-        private IList<Request> _receivedRequests;
-        private IList<Request> _sentRequests;
+        public IList<Request> _receivedRequests;
+        public IList<Request> _sentRequests;
 
         private ObservableCollection<User> _receivedRequestUsers { get; set; }
         private ObservableCollection<User> _sentRequestUsers { get; set; }
@@ -89,11 +89,6 @@ namespace BetterConnectOO.ViewModels
                 }
             }
             return null;
-        }
-
-        public void ReceivedRequestClicked(int index)
-        {
-            Request clicked = _receivedRequests.ElementAt(index);
         }
 
     }

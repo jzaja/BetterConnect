@@ -87,6 +87,9 @@
     <Compile Include="ViewModels\RequestsViewModel.cs" />
     <Compile Include="ViewModels\UserRequest.cs" />
     <Compile Include="ViewModels\UsersViewModel.cs" />
+    <Compile Include="View\AcceptDeclineWindow.xaml.cs">
+      <DependentUpon>AcceptDeclineWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AddInterestWindow.xaml.cs">
       <DependentUpon>AddInterestWindow.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
     <Compile Include="View\RequestsWindow.xaml.cs">
       <DependentUpon>RequestsWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AcceptDeclineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddInterestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

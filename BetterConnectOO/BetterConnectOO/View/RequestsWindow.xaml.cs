@@ -21,7 +21,8 @@ namespace BetterConnectOO.View
     /// <summary>
     /// Interaction logic for RequestsWindow.xaml
     /// </summary>
-    public partial class RequestsWindow : Window
+    /// 
+    public partial class RequestsWindow : Window, AcceptDeclineWindowDelegate
     {
         private RequestsViewModel _vm;
         public RequestsWindow()
@@ -32,10 +33,46 @@ namespace BetterConnectOO.View
             this.DataContext = _vm;
         }
 
-        private void UserGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void UserGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var clickedIndex = UserGrid.SelectedIndex;
-            MessageBox.Show(clickedIndex.ToString());
+            var userSender = _vm.ReceivedRequestUsers.ElementAt(clickedIndex);
+            var selectedRequest = _vm._receivedRequests.ElementAt(clickedIndex);
+            Request request = await APIManager.GetRequest(selectedRequest.SenderId, selectedRequest.ReceiverId);
+
+            if (!request.IsConfirmed && !request.IsDeclined)
+            {
+                AcceptDeclineWindow window = new AcceptDeclineWindow();
+                window._delegate = this;
+                window.SetUsername(userSender.username);
+                window.SetRequest(request);
+                window.Show();
+            }
+            else
+            {
+                if (request.IsConfirmed)
+                {
+                    MessageBox.Show("You already confirmed this request.");
+                }
+                else
+                {
+                    if (request.IsDeclined)
+                    {
+                        MessageBox.Show("You already declined this request.");
+                    }
+                }
+            }
         }
+
+        public void RequestAccepted()
+        {
+            MessageBox.Show("You confirmed the request!");
+        }
+
+        public void RequestDeclined()
+        {
+            MessageBox.Show("You declined the request!");
+        }
+
     }
 }
