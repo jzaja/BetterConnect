@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using BetterConnectOO.Models.Singleton;
 
 namespace BetterConnectOO.API
 {
@@ -119,6 +120,21 @@ namespace BetterConnectOO.API
             HttpResponseMessage response = await client.PutAsJsonAsync(path, new SendRequestDTO { SenderId = senderId, ReceiverId = receiverId });
             Request req = await response.Content.ReadAsAsync<Request>();
             return req;
+        }
+
+        public static async Task<Admin> RegisterAdmin()
+        {
+            string path = APIConstants.AuthBaseURL + "/registerAdmin";
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, new RegisterAdminDTO { Password = "adminpass" });
+            Admin admin = await response.Content.ReadAsAsync<Admin>();
+            return admin;
+        }
+        public static async Task<User> BlockUser(int adminId, int userId)
+        {
+            string path = APIConstants.UsersBaseURL + "/blockUser/" + CurrentUser.Instance.Id + "/" + userId;
+            HttpResponseMessage response = await client.PutAsJsonAsync(path, "");
+            User user = await response.Content.ReadAsAsync<User>();
+            return user;
         }
 
     }

@@ -47,6 +47,8 @@ namespace BetterConnectOO.ViewModels
             IList<User> allUsers = await APIManager.GetAllUsers();
             AllUsers.Instance.Set(allUsers);
 
+            Users.Clear();
+
             int currentUserId = CurrentUser.Instance.Id;
             allUsers.ToList().Where(user => user.id != currentUserId).ToList().ForEach(Users.Add);
         }
@@ -91,6 +93,21 @@ namespace BetterConnectOO.ViewModels
 
             Users.Clear();
             searched.ToList().Where(user => user.id != CurrentUser.Instance.Id).ToList().ForEach(Users.Add);
+        }
+
+        public async void BlockUser(User user)
+        {
+            User blocked = await APIManager.BlockUser(CurrentUser.Instance.Id, user.id);
+            if (blocked == null)
+            {
+                MessageBox.Show("Korisnik je već blokiran.");
+            }
+            else
+            {
+                MessageBox.Show("Korisnik: " + user.username + " je blokiran.");
+            }
+
+            FetchUsers();
         }
 
         private ICommand mUpdater;

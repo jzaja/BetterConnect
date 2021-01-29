@@ -94,11 +94,25 @@ namespace ProjectDatabase.Repository.ListRepository
 
         public BasicUser GetByUsername(string username)
         {
-            foreach (User u in _users)
+            if (username.ToLower().Equals("admin"))
             {
-                if (u.Username.ToLower().Equals(username.ToLower()))
+                foreach (BasicUser user in _users)
                 {
-                    return u;
+                    if (!user.IsRegularUser)
+                    {
+                        return (Admin)user;
+                    }
+                }
+            }
+
+            foreach (BasicUser u in _users)
+            {
+                if (u.IsRegularUser)
+                {
+                    if (u.Username.ToLower().Equals(username.ToLower()))
+                    {
+                        return (User)u;
+                    }
                 }
             }
 

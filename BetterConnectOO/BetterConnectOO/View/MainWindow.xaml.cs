@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using BetterConnectOO.API;
 using BetterConnectOO.Models;
 using BetterConnectOO.Models.Singleton;
+using BetterConnectOO.View;
 using BetterConnectOO.ViewModels;
 
 namespace BetterConnectOO
@@ -42,13 +43,22 @@ namespace BetterConnectOO
             string password = PasswordTextBox.Password;
 
             User logedUser = await APIManager.LoginUser(username, password);
+            CurrentUser.Instance.user = logedUser;
 
             if (logedUser != null)
             {
-                CurrentUser.Instance.user = logedUser;
-                GeneralWindow generalWindow = new GeneralWindow();
+                if (!logedUser.isRegularUser)
+                {
+                    // otvori novi prozor za admina
+                    AdminWindow window = new AdminWindow();
+                    window.Show();
+                }
+                else
+                {
+                    GeneralWindow generalWindow = new GeneralWindow();
+                    generalWindow.Show();
+                }
 
-                generalWindow.Show();
                 Login.Close();
             } else
             {
@@ -58,6 +68,8 @@ namespace BetterConnectOO
 
         private async void OnFillDatabase(object sender, RoutedEventArgs e)
         {
+            Admin admin = await APIManager.RegisterAdmin();
+
             User user1 = await APIManager.RegisterNewUser("misko", "pass", "0919292933");
             User user2 = await APIManager.RegisterNewUser("lordWilly35", "pass", "099564372");
             User user3 = await APIManager.RegisterNewUser("DBDFan", "pass", "0955148986");

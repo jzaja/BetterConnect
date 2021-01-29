@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\App.xaml
-8-440756514
+9-245233004
 
-28-416445868
+31-1873953622
 17142312642
-View\AcceptDeclineWindow.xaml;View\AddInterestWindow.xaml;View\EditProfile.xaml;View\GeneralWindow.xaml;View\MainWindow.xaml;View\Profile.xaml;View\RegistrationWindow.xaml;View\RequestsWindow.xaml;
+View\AcceptDeclineWindow.xaml;View\AddInterestWindow.xaml;View\AdminWindow.xaml;View\EditProfile.xaml;View\GeneralWindow.xaml;View\MainWindow.xaml;View\Profile.xaml;View\RegistrationWindow.xaml;View\RequestsWindow.xaml;
 
-True
+False
 

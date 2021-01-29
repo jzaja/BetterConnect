@@ -92,3 +92,5 @@ C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\RequestsWindow.baml
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AcceptDeclineWindow.g.cs
 C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AcceptDeclineWindow.baml
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AdminWindow.g.cs
+C:\Users\Zeljko\Desktop\BetterConnect\BetterConnectOO\BetterConnectOO\obj\Debug\View\AdminWindow.baml

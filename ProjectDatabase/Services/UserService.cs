@@ -81,6 +81,7 @@ namespace ProjectDatabase.Services
             {
                 user.Username = "Blocked";
                 user.PhoneNumber = "000 000 000";
+                _userRepo.Update(user);
 
                 return user;
             }

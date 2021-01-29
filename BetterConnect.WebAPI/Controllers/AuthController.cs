@@ -59,5 +59,11 @@ namespace BetterConnect.WebAPI.Controllers
             return _authService.Login(loginUserDTO.Username, loginUserDTO.Password);
         }
 
+        [HttpPut("blockUser")]
+        public User Block(BlockUserDTO blockUserDTO)
+        {
+            return _userService.BlockUser(blockUserDTO.AdminId, blockUserDTO.UserId);
+        }
+
     }
 }

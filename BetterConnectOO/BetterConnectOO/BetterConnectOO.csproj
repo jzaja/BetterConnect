@@ -74,10 +74,13 @@
     </ApplicationDefinition>
     <Compile Include="API\APIConstants.cs" />
     <Compile Include="API\APIManager.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\BasicUser.cs" />
+    <Compile Include="Models\BlockUserDTO.cs" />
     <Compile Include="Models\Interest.cs" />
     <Compile Include="Models\InterestUpdateDTO.cs" />
     <Compile Include="Models\LoginUserDTO.cs" />
+    <Compile Include="Models\RegisterAdminDTO.cs" />
     <Compile Include="Models\RegisterUserDTO.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\SendRequestDTO.cs" />
@@ -85,13 +88,15 @@
     <Compile Include="Models\Singleton\CurrentUser.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ViewModels\RequestsViewModel.cs" />
-    <Compile Include="ViewModels\UserRequest.cs" />
     <Compile Include="ViewModels\UsersViewModel.cs" />
     <Compile Include="View\AcceptDeclineWindow.xaml.cs">
       <DependentUpon>AcceptDeclineWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AddInterestWindow.xaml.cs">
       <DependentUpon>AddInterestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EditProfile.xaml.cs">
       <DependentUpon>EditProfile.xaml</DependentUpon>
@@ -113,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AddInterestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
