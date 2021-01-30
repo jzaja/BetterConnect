@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BetterConnectOO.View"
         mc:Ignorable="d"
-        Title="AcceptDeclineWindow" Height="245.022" Width="428.773">
+        Title="AcceptDeclineWindow" Height="240" Width="420" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Zahtjev šalje:" HorizontalAlignment="Left" Margin="172,45,0,0" VerticalAlignment="Top"/>
         <Label Name="UsernameLabel" Content="tams35&#xD;&#xA;" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontWeight="Bold" Margin="105,69,0,0" VerticalAlignment="Top" Height="25" Width="214"/>

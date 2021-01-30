@@ -6,32 +6,27 @@
         xmlns:local="clr-namespace:BetterConnectOO"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="BetterConnect" Height="500" Width="1001" WindowStartupLocation="CenterScreen">
+        Title="BetterConnect" Height="500" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
-            <ColumnDefinition Width="350"/>
+
+            <ColumnDefinition Width="177.932"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1" Background="White" Margin="58,0,-291,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="33*"/>
-                <ColumnDefinition Width="142*"/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-        <StackPanel Grid.Column="0" Background="#FF1C94F4" Grid.ColumnSpan="2" Margin="0,0,293,0">
+        <StackPanel Grid.Column="0" Background="#FF1C94F4" Grid.ColumnSpan="2" Margin="0,0,127.6,0.2">
             <StackPanel Orientation="Horizontal" Background="White" Height="158">
-                <Button Margin="10,0,0,0" Background="Blue" Click="OnRequests" >Zahtjevi</Button>
+                <Button Margin="10,0,0,0" Background="#FF1C94F4" Click="OnRequests" >Zahtjevi</Button>
                 <Image Width="150" Height="100" Source="/Images/Logo/BetterConnect.png"/>
                 <Button Style="{StaticResource MaterialDesignFlatButton}" Click="EditProfile">
                     <materialDesign:PackIcon Kind="Edit" Height="22" Width="30"/>
                 </Button>
-                <Button Content="Odjava" Height="30" Width="75" Click="OnLogout"/>
+                <Button Content="Odjava" Height="30" Width="75" Click="OnLogout" Margin="0,64,0,64.4"/>
             </StackPanel>
             <TextBox Name="InterestSearchTextBox" FontSize="16" materialDesign:HintAssist.Hint="Pretraživanje po interesu" Margin="20 10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White"/>
-            <Button Content="Traži" Background="Coral" Click="OnSearch" />
+            <Button Content="Traži" Foreground="White" Style="{StaticResource MaterialDesignFlatButton}" Click="OnSearch" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="58,0,-291,0">
+        <StackPanel Grid.Column="1" Margin="55.8,0,-464.4,0.2">
             <ListView Name="UserGrid" Margin="0,10,10,10" ItemsSource="{ Binding Users }">
 
 
@@ -50,6 +45,6 @@
 
             </ListView>
         </StackPanel>
-        
+
     </Grid>
 </Window>

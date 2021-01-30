@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj": {}
+    "C:\\Users\\Josip\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj": {
+    "C:\\Users\\Josip\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
+        "projectUniqueName": "C:\\Users\\Josip\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
         "projectName": "ProjectDatababaseTest",
-        "projectPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
-        "packagesPath": "C:\\Users\\Zeljko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatababaseTest\\obj\\",
+        "projectPath": "C:\\Users\\Josip\\BetterConnect\\ProjectDatababaseTest\\ProjectDatababaseTest.csproj",
+        "packagesPath": "C:\\Users\\Josip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Josip\\BetterConnect\\ProjectDatababaseTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zeljko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Josip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {
-                "projectPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj"
+              "C:\\Users\\Josip\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {
+                "projectPath": "C:\\Users\\Josip\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj"
               }
             }
           }
@@ -83,24 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {
+    "C:\\Users\\Josip\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
+        "projectUniqueName": "C:\\Users\\Josip\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
         "projectName": "ProjectDatabase",
-        "projectPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
-        "packagesPath": "C:\\Users\\Zeljko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zeljko\\Desktop\\BetterConnect\\ProjectDatabase\\obj\\",
+        "projectPath": "C:\\Users\\Josip\\BetterConnect\\ProjectDatabase\\ProjectDatabase.csproj",
+        "packagesPath": "C:\\Users\\Josip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Josip\\BetterConnect\\ProjectDatabase\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zeljko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Josip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BetterConnectOO.View"
         mc:Ignorable="d"
-        Title="AddInterestWindow" Height="325.667" Width="513.164">
+        Title="AddInterestWindow" Height="320" Width="500">
     <Grid Margin="0,0,-149,0">
         <Label Content="Naziv interesa:" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top" Height="39" FontSize="20" Width="139"/>
         <TextBox x:Name="InterestTextBox" HorizontalAlignment="Left" Height="28" Margin="171,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="313" FontSize="16" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" />

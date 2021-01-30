@@ -6,29 +6,29 @@
         xmlns:local="clr-namespace:BetterConnectOO.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="625.105" Width="1187.866">
+        Title="AdminWindow" Height="500" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
             <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1" Background="White" Margin="154,0,-448,0">
+        <Grid Grid.Column="1" Background="White" Margin="59.8,0,-291.6,0.2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="33*"/>
                 <ColumnDefinition Width="142*"/>
             </Grid.ColumnDefinitions>
         </Grid>
-        <StackPanel Grid.Column="0" Background="#FF1C94F4" Grid.ColumnSpan="2" Margin="0,0,197,0">
+        <StackPanel Grid.Column="0" Background="#FF1C94F4" Grid.ColumnSpan="2" Margin="0,0,291.4,0.2">
             <StackPanel Orientation="Horizontal" Background="White" Height="158">
-                <Image Width="199" Height="100" Source="/Images/Logo/BetterConnect.png" Margin="0,29"/>
-                <Label Content="Admin console" FontWeight="Bold" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="SlateGray" Width="210"></Label>
-                <Button Click="OnLogout" >Odjavi se</Button>
+                <Image Width="129" Source="/Images/Logo/BetterConnect.png" Margin="0,29,0,34.4"/>
+                <Label Content="Admin console" FontWeight="Bold" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="SlateGray" Width="174" Margin="0,0,0,0.4"/>
+                <Button Click="OnLogout" Content="Odjavi se" Margin="0,63,0,63.4" />
             </StackPanel>
             <TextBox Name="InterestSearchTextBox" FontSize="16" materialDesign:HintAssist.Hint="Pretraživanje po interesu" Margin="20 10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White"/>
-            <Button Content="Traži" Background="Coral" Click="OnSearch" />
+            <Button Content="Traži" Foreground="White" Style="{StaticResource MaterialDesignFlatButton}" Click="OnSearch" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="154,0,-478,0">
+        <StackPanel Grid.Column="1" Margin="64.8,0,-291.6,0.2">
             <ListView Name="UserGrid" Margin="0,10,10,10" ItemsSource="{ Binding Users }">
 
 
