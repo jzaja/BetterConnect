@@ -29,6 +29,12 @@ namespace BetterConnect.WebAPI.Controllers
             _userService = new UserService(_userRepo, _interestRepo);
         }
 
+        [HttpPut("updateProfileImage")]
+        public User UpdateProfileImage(UpdateProfileImageDTO updateProfileImageDTO)
+        {
+            return _userService.UpdateProfileImage(updateProfileImageDTO.UserId, updateProfileImageDTO.ImageUrl);
+        }
+
         [HttpPut("addInterest")]
         public User AddInterest(InterestUpdateDTO interestUpdateDTO)
         {

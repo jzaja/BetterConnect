@@ -103,5 +103,18 @@ namespace ProjectDatabase.Services
             return _userRepo.Delete(user);
         }
 
+        public User UpdateProfileImage(int userId, string imageUrl)
+        {
+            var user = _userRepo.GetUser(userId);
+            if (user == null)
+            {
+                return null;
+            }
+
+            user.ImageUrl = imageUrl;
+            _userRepo.Update(user);
+            return user;
+        }
+
     }
 }

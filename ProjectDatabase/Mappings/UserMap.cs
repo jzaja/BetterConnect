@@ -14,6 +14,7 @@ namespace ProjectDatabase.Mappings
         public UserMap()
         {
             Map(x => x.PhoneNumber).Not.Nullable();
+            Map(x => x.ImageUrl);
             HasManyToMany(x => x.Interests)
                 .Cascade.All()
                 .Inverse()
@@ -22,6 +23,5 @@ namespace ProjectDatabase.Mappings
         }
 
     }
-    
     
 }

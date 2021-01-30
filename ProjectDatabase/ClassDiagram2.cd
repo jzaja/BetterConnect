@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjectDatabase.Repository.ConcreteRepository.UserRepository" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAoAAAAAAAABAAAEQAEAKEAEAAAAAEgAAAAEAAgA=</HashCode>
+      <FileName>Repository\ConcreteRepository\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.28" />
+  </Class>
+  <Class Name="ProjectDatabase.Repository.ListRepository.UserListRepository" Collapsed="true">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAoAAAAAAAABAAAAQAEACEAEAAIAAEgAAAAEAAgA=</HashCode>
+      <FileName>Repository\ListRepository\UserListRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectDatabase.Repository.ConcreteRepository.InterestRepository" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEIAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAg=</HashCode>
+      <FileName>Repository\ConcreteRepository\InterestRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.3" />
+  </Class>
+  <Class Name="ProjectDatabase.Repository.ListRepository.InterestListRepository" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEIAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAg=</HashCode>
+      <FileName>Repository\ListRepository\InterestListRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectDatabase.Repository.ConcreteRepository.RequestRepository" Collapsed="true">
+    <Position X="14.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAEAAAAAAAAAAAAAAAAAAAAAgAgAQCAAAAgA=</HashCode>
+      <FileName>Repository\ConcreteRepository\RequestRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.3" />
+  </Class>
+  <Class Name="ProjectDatabase.Repository.ListRepository.RequestListRepository" Collapsed="true">
+    <Position X="17" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAEAAAAAAQAAAAAAAAAAAAAAAAgAQCAAAAgA=</HashCode>
+      <FileName>Repository\ListRepository\RequestListRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ProjectDatabase.Repository.IUserRepository">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAoAAAAAAAABAAAAQAEACEAEAAAAAEgAAAAEAAgA=</HashCode>
+      <FileName>Repository\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjectDatabase.Repository.IInterestRepository">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAg=</HashCode>
+      <FileName>Repository\IInterestRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjectDatabase.Repository.IRequestRepository">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAgAQCAAAAgA=</HashCode>
+      <FileName>Repository\IRequestRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
