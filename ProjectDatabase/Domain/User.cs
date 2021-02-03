@@ -7,6 +7,7 @@ namespace ProjectDatabase.Domain
     public class User : BasicUser
     {
         public virtual string PhoneNumber { get; set; }
+        public virtual string ImageUrl { get; set; }
         public virtual IList<Interest> Interests { get; set; }
         public virtual ISet<Request> Requests { get; set; }
 
